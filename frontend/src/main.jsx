@@ -7,12 +7,14 @@ import FunFacts from "./pages/fun-facts/FunFacts.jsx";
 import NotFoundPage from "./pages/not-found-page/NotFoundPage.jsx";
 import TimePeriods from "./pages/time-periods/TimePeriods.jsx";
 import DinosaursToday from "./pages/dinosaurs-today/DinosaursToday.jsx";
+import Search from "./pages/search-page/Search.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
   { path: "/time-periods", element: <TimePeriods /> },
   { path: "/dinosaurs-today", element: <DinosaursToday /> },
   { path: "/fun-facts", element: <FunFacts /> },
+  { path: "/search", element: <Search /> },
 
   { path: "*", element: <NotFoundPage /> },
 ]);

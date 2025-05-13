@@ -5,19 +5,15 @@ const Navbar = () => {
   return (
     <>
       <section id="navbar">
-        <Link to={"/"}>
-          <button>Home </button>
-        </Link>
-        <Link to={"/time-periods"}>
-          <button>Time Periods </button>
-        </Link>
-        <Link to={"/dinosaurs-today"}>
-          <button>Dinosaurs Today </button>
-        </Link>
-
-        <Link to={"/fun-facts"}>
-          <button>Fun Facts </button>
-        </Link>
+        <article id="navbar-logo">
+          <Link to={"/"}>Logo</Link>
+        </article>
+        <article id="navbar-right-side">
+          <Link to={"/time-periods"}>Time Periods</Link>
+          <Link to={"/dinosaurs-today"}>Dinosaurs Today</Link>
+          <Link to={"/fun-facts"}>Fun Facts</Link>
+          <Link to={"/search"}>Search</Link>
+        </article>
       </section>
     </>
   );

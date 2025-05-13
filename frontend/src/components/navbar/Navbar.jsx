@@ -11,7 +11,7 @@ const Navbar = () => {
         <article id="navbar-right-side">
           <Link to={"/time-periods"}>Time Periods</Link>
           <Link to={"/dinosaurs-today"}>Dinosaurs Today</Link>
-          <Link to={"/fun-facts"}>Fun Facts</Link>
+          <Link to={"/did-you-know"}>Did you Know?</Link>
           <Link to={"/search"}>Search</Link>
         </article>
       </section>

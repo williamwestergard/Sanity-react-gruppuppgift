@@ -1,0 +1,12 @@
+#not-found-page-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-found-icon {
+  position: relative;
+  width: 70px;
+  left: 1vw;
+}

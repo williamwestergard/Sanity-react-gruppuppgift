@@ -1,4 +1,5 @@
 import Posts from "./components/posts";
+import DidYouKnow from "./components/DidYouKnow";
 import "./App.css";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <p>Skapad av dinosaurieexperter runt om i Sverige.</p>
 
       <Posts />
+      <DidYouKnow />
     </>
   );
 }

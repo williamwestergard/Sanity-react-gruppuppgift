@@ -4,3 +4,15 @@
   padding: 2rem;
   text-align: center;
 }
+
+.DYK ul {
+  list-style-type: '🦖 ';
+  padding-left: 24px;
+  text-align: left;
+  display: inline-block;
+}
+
+.DYK li {
+  margin: 10px 0;
+  line-height: 1.5;
+}

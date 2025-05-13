@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import dinoLogo from "../../assets/tyrannosaurus-rex.png"; //Madelen Logo
+
 import "./navbar.css";
 
 const Navbar = () => {
@@ -6,7 +8,9 @@ const Navbar = () => {
     <>
       <section id="navbar">
         <article id="navbar-logo">
-          <Link to={"/"}>Logo</Link>
+          <Link to={"/"}>
+          <img src={dinoLogo} alt="Dino Logo" className="logo-img"/> {/*New icon instead of LOGO*/}
+          </Link>
         </article>
         <article id="navbar-right-side">
           <Link to={"/time-periods"}>Time Periods</Link>

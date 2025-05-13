@@ -1,0 +1,39 @@
+#navbar {
+  z-index: 1000;
+  width: 80%;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--beige);
+  padding: 2vh 2.5vw;
+  border-radius: 7px;
+}
+
+#navbar-logo {
+  position: relative;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#navbar-right-side {
+  position: relative;
+  right: 0;
+  display: flex;
+  justify-content: flex-start;
+  gap: 2.5vw;
+}
+#navbar a {
+  color: var(--black);
+  text-decoration: none;
+  font-weight: 600;
+}
+#navbar a:hover {
+  color: #6b3838;
+  text-decoration: none;
+  font-weight: 600;
+}

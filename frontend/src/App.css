@@ -5,6 +5,7 @@
   text-align: center;
 }
 
+
 .DYK ul {
   list-style-type: '🦖 ';
   padding-left: 24px;
@@ -16,3 +17,26 @@
   margin: 10px 0;
   line-height: 1.5;
 }
+
+.dinosaurs-today {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.animal-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+}
+
+.animal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+

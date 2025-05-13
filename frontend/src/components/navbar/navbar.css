@@ -8,8 +8,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   background-color: var(--beige);
-  padding: 2vh 2.5vw;
+  padding: 1.5vh 2.5vw;
   border-radius: 7px;
 }
 
@@ -44,4 +45,3 @@
   width: auto;
   object-fit: contain;
 }
-

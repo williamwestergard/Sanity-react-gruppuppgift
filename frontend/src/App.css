@@ -5,6 +5,19 @@
   text-align: center;
 }
 
+
+.DYK ul {
+  list-style-type: '🦖 ';
+  padding-left: 24px;
+  text-align: left;
+  display: inline-block;
+}
+
+.DYK li {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
 .dinosaurs-today {
   display: flex;
   flex-direction: column;
@@ -26,3 +39,4 @@
   border-radius: 8px;
   object-fit: cover;
 }
+

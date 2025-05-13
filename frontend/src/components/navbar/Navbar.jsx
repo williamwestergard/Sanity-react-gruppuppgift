@@ -8,9 +8,9 @@ const Navbar = () => {
     <>
       <section id="navbar">
         <article id="navbar-logo">
-          <h1>Test</h1>
           <Link to={"/"}>
-          <img src={dinoLogo} alt="Dino Logo" className="logo-img"/> {/*New icon instead of LOGO*/}
+            <img src={dinoLogo} alt="Dino Logo" className="logo-img" />{" "}
+            {/*New icon instead of LOGO*/}
           </Link>
         </article>
         <article id="navbar-right-side">

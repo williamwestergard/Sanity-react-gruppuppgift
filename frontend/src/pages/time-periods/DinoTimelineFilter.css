@@ -1,0 +1,44 @@
+#timeline-container {
+  margin-top: 15vh;
+}
+
+.dino-container {
+  margin-bottom: 1.5rem;
+}
+
+.dino-description {
+  margin-bottom: 0.5rem;
+  color: #4b5563;
+  text-align: center;
+}
+
+.dino-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.dino-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+}
+
+.dino-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.dino-period {
+  color: #4b5563;
+  font-style: italic;
+}
+
+.dino-info {
+  margin: 0.25rem 0;
+}
+
+.no-results {
+  text-align: center;
+  color: #6b7280;
+}

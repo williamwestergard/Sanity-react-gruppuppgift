@@ -1,30 +1,45 @@
-.dino-grid {
+#alphabet-container {
+  position: relative;
+  left: 3vw;
+  top: 3vh;
+}
+
+.letter-grid-container {
   display: grid;
-  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.5rem;
+
+  padding: 1rem;
+}
+.letter-group {
+  padding: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  min-height: 200px;
+}
+
+.big-letter {
+  margin: 0;
+  padding: 0;
+  font-size: 3.3rem;
 }
 
 .dino-card {
-  border: 1px solid #000000;
-  border-radius: 0.75rem;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  position: relative;
   padding: 1rem;
+  font-size: 1.12rem;
+  font-weight: 700;
+  top: -0.5vh;
+  left: 0.5vw;
+}
+.dino-card:hover {
+  cursor: pointer;
+  color: rgb(61, 61, 61);
 }
 
 .dino-title {
-  font-size: 1.25rem;
-  font-weight: bold;
-}
-
-.dino-period {
-  color: #4b5563;
-  font-style: italic;
-}
-
-.dino-info {
-  margin: 0.25rem 0;
-}
-
-.no-results {
-  text-align: center;
-  color: #6b7280;
+  margin: 0;
+  padding: 0;
+  line-height: 0px;
 }

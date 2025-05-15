@@ -1,32 +1,43 @@
 import "./timeline.css";
 import MockDinos from "./MockDinos.jsx";
 
+const alphabet = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+
 export default function TimeLineFilter({ selectedRange }) {
   const filteredDinos = MockDinos.filter((dino) => {
     const [rangeStart, rangeEnd] = selectedRange;
     return dino.start_mya >= rangeEnd && dino.end_mya <= rangeStart;
   });
 
+  const groupedDinos = filteredDinos.reduce((acc, dino) => {
+    const letter = dino.name[0].toUpperCase();
+    if (!acc[letter]) acc[letter] = [];
+    acc[letter].push(dino);
+    return acc;
+  }, {});
+
   return (
     <div>
-      {filteredDinos.length > 0 ? (
-        <div className="dino-grid">
-          {filteredDinos.map((dino) => (
-            <div key={dino.name} className="dino-card">
-              <h2 className="dino-title">{dino.name}</h2>
-              {/* <p className="dino-period">{dino.period}</p>
-              <p className="dino-info">
-                <strong>Lived:</strong> {dino.start_mya}–{dino.end_mya} MYA
-              </p>
-              <p className="dino-info">
-                <strong>Diet:</strong> {dino.diet}
-              </p> */}
-            </div>
-          ))}
-        </div>
-      ) : (
-        <p className="no-results">No dinosaurs found in this time range.</p>
-      )}
+      <section className="letter-grid-container">
+        {alphabet.map((letter) => (
+          <div key={letter} className="letter-group">
+            <section id="alphabet-container">
+              <h2 className="big-letter">{letter}</h2>
+              <div className="dino-grid">
+                {groupedDinos[letter] && groupedDinos[letter].length > 0 ? (
+                  groupedDinos[letter].map((dino) => (
+                    <div key={dino.name} className="dino-card">
+                      <p className="dino-title">{dino.name}</p>
+                    </div>
+                  ))
+                ) : (
+                  <p className="no-dinos"></p>
+                )}
+              </div>
+            </section>
+          </div>
+        ))}
+      </section>
     </div>
   );
 }

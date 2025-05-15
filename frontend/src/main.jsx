@@ -8,9 +8,11 @@ import NotFoundPage from "./pages/not-found-page/NotFoundPage.jsx";
 import TimePeriods from "./pages/time-periods/TimePeriods.jsx";
 import DinosaursToday from "./pages/dinosaurs-today/DinosaursToday.jsx";
 import Search from "./pages/search-page/Search.jsx";
+import DinosaursIndex from "./pages/dinosaurs-index/DinosaursIndex.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
+  { path: "/dinosaurs-index", element: <DinosaursIndex /> },
   { path: "/time-periods", element: <TimePeriods /> },
   { path: "/dinosaurs-today", element: <DinosaursToday /> },
   { path: "/did-you-know", element: <DidYouKnow /> },

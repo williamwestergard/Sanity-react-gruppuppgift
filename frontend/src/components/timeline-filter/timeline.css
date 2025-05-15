@@ -1,24 +1,10 @@
-#timeline-container {
-  margin-top: 15vh;
-}
-
-.dino-container {
-  margin-bottom: 1.5rem;
-}
-
-.dino-description {
-  margin-bottom: 0.5rem;
-  color: #4b5563;
-  text-align: center;
-}
-
 .dino-grid {
   display: grid;
   gap: 1rem;
 }
 
 .dino-card {
-  border: 1px solid #e5e7eb;
+  border: 1px solid #000000;
   border-radius: 0.75rem;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   padding: 1rem;

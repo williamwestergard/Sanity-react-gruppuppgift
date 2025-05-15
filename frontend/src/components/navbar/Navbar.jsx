@@ -14,6 +14,7 @@ const Navbar = () => {
           </Link>
         </article>
         <article id="navbar-right-side">
+          <Link to={"/dinosaurs-index"}>Dinosaurs index</Link>
           <Link to={"/time-periods"}>Time Periods</Link>
           <Link to={"/dinosaurs-today"}>Dinosaurs Today</Link>
           <Link to={"/did-you-know"}>Did you Know?</Link>

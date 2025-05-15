@@ -13,7 +13,7 @@ export default {
     {
       name: 'description',
       type: 'text',
-      name: 'Description',
+      title: 'Description',
     },
   ],
 }

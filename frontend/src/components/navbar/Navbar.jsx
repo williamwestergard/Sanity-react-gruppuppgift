@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import dinoLogo from "../../assets/tyrannosaurus-rex.png"; //Madelen Logo
+import dinoLogo from "../../assets/logo_animation.webm"; //Madelen Logo
 
 import "./navbar.css";
 
@@ -9,7 +9,12 @@ const Navbar = () => {
       <section id="navbar">
         <article id="navbar-logo">
           <Link to={"/"}>
-            <img src={dinoLogo} alt="Dino Logo" className="logo-img" />{" "}
+            <video
+              src={dinoLogo}
+              alt="Dino Logo"
+              className="logo-img"
+              onMouseOver={(event) => event.target.play()}
+            />{" "}
             {/*New icon instead of LOGO*/}
           </Link>
         </article>

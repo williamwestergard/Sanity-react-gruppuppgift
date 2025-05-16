@@ -8,7 +8,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-ul {
+.featured-dinos-list ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -16,7 +16,7 @@ ul {
   font-weight: 700;
   text-transform: uppercase;
 }
-li:first-child {
+.featured-dinos-list li:first-child {
   list-style: none;
 }
 

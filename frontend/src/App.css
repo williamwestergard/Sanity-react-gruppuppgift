@@ -4,3 +4,14 @@
   padding: 2rem;
   text-align: center;
 }
+html {
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    html {
+      overflow-y: scroll;
+    }
+  }
+}

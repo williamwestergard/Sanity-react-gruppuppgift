@@ -33,10 +33,13 @@
   text-decoration: none;
   font-weight: 600;
 }
-#navbar a:hover {
+
+#navbar-right-side a:hover:not(.active-link) {
   color: #6b3838;
-  text-decoration: none;
-  font-weight: 600;
+}
+
+#navbar .active-link {
+  color: #984e4e;
 }
 
 /* LOGO CSS Madelen */

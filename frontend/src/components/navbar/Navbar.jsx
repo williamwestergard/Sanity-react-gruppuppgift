@@ -1,26 +1,48 @@
-import { Link } from "react-router-dom";
-import dinoLogo from "../../assets/tyrannosaurus-rex.png"; //Madelen Logo
-
+import { NavLink } from "react-router-dom";
+import dinoLogo from "../../assets/tyrannosaurus-rex.png";
 import "./navbar.css";
 
 const Navbar = () => {
   return (
-    <>
-      <section id="navbar">
-        <article id="navbar-logo">
-          <Link to={"/"}>
-            <img src={dinoLogo} alt="Dino Logo" className="logo-img" />{" "}
-            {/*New icon instead of LOGO*/}
-          </Link>
-        </article>
-        <article id="navbar-right-side">
-          <Link to={"/time-periods"}>Time Periods</Link>
-          <Link to={"/dinosaurs-today"}>Dinosaurs Today</Link>
-          <Link to={"/did-you-know"}>Did you Know?</Link>
-          <Link to={"/search"}>Search</Link>
-        </article>
-      </section>
-    </>
+    <section id="navbar">
+      <article id="navbar-logo">
+        <NavLink to="/">
+          <img src={dinoLogo} alt="Dino Logo" className="logo-img" />
+        </NavLink>
+      </article>
+      <article id="navbar-right-side">
+        <NavLink
+          to="/dinosaurs-index"
+          className={({ isActive }) => (isActive ? "active-link" : "")}
+        >
+          Dinosaurs index
+        </NavLink>
+        <NavLink
+          to="/time-periods"
+          className={({ isActive }) => (isActive ? "active-link" : "")}
+        >
+          Time Periods
+        </NavLink>
+        <NavLink
+          to="/dinosaurs-today"
+          className={({ isActive }) => (isActive ? "active-link" : "")}
+        >
+          Dinosaurs Today
+        </NavLink>
+        <NavLink
+          to="/did-you-know"
+          className={({ isActive }) => (isActive ? "active-link" : "")}
+        >
+          Did you Know?
+        </NavLink>
+        <NavLink
+          to="/search"
+          className={({ isActive }) => (isActive ? "active-link" : "")}
+        >
+          Search
+        </NavLink>
+      </article>
+    </section>
   );
 };
 

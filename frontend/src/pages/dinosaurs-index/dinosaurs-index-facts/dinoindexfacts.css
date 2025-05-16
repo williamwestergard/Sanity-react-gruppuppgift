@@ -1,0 +1,79 @@
+.go-back-to-index {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  left: -7vw;
+}
+.go-back-to-index a {
+  align-items: center;
+  text-transform: uppercase;
+  align-content: center;
+  color: black;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.go-back-to-index img {
+  margin-right: 0.7vw;
+}
+
+#dino-facts-content {
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7vh;
+}
+
+.dino-fact-image {
+  mix-blend-mode: multiply;
+  width: 110%;
+  position: relative;
+  top: 4vh;
+}
+.dino-facts-right-side {
+  width: 50%;
+  margin-left: 10vw;
+}
+
+.dino-facts-left-side {
+  width: 50%;
+}
+
+.dino-facts-header h1 {
+  line-height: 6vh;
+  margin: 0;
+  padding: 0;
+}
+
+.dino-facts-length-period {
+  margin-top: 4vh;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  line-height: 1vh;
+  margin-bottom: 5vh;
+}
+.dino-facts-length-period-bold {
+  font-weight: 700;
+}
+
+.dino-facts-diet {
+  position: absolute;
+  margin-top: 4vh;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: white;
+  background-color: #2a4837;
+  border-radius: 7px;
+  padding: 0.2vh 1.5vw;
+  height: auto;
+  line-height: 3px;
+}
+.dino-facts-diet-bold {
+  font-weight: 700;
+}

@@ -1,5 +1,5 @@
 import "./timeline.css";
-import MockDinos from "./MockDinos.jsx";
+import MockDinos from "../../assets/scraped-dinos.json";
 
 const alphabet = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
 

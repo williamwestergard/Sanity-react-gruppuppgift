@@ -15,7 +15,7 @@ const Navbar = () => {
           to="/dinosaurs-index"
           className={({ isActive }) => (isActive ? "active-link" : "")}
         >
-          Dinosaurs index
+          Dinosaurs Index
         </NavLink>
         <NavLink
           to="/time-periods"

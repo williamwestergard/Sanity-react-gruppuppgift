@@ -33,10 +33,6 @@
   top: -0.5vh;
   left: 0.5vw;
 }
-.dino-card:hover {
-  cursor: pointer;
-  color: rgb(61, 61, 61);
-}
 
 .dino-title {
   margin: 0;

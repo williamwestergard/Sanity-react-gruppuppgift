@@ -1,5 +1,6 @@
 import "./featureddinos.css";
 import Navbar from "../../components/navbar/Navbar";
+import Footer from "../../components/footer/Footer.jsx";
 import FeaturedDinoImage from "./img/t-rex.png";
 import FeaturedDinoImageBg from "./img/featured-dino-bg.png";
 
@@ -58,6 +59,7 @@ const FeaturedDinos = () => {
         </article>
         <span className="featured-dino-bottom-line"></span>
       </main>
+      <Footer />
     </>
   );
 };

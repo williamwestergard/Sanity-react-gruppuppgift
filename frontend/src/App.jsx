@@ -1,13 +1,30 @@
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
+import SlideShow from "./components/slideshow/SwiperSlider";
+import DinoPromo from "./assets/dinosaur-promo.jpg";
+import DidYouKnowCard from "./components/did-you-know-card/DidYouKnowCard";
 
 function App() {
   return (
     <>
       <Navbar />
-      <h1> Startsidan! </h1>
-      <p>Created by dino experts all over Sweden.</p>
+      <section className="page-wrapper">
+        <main id="main-content">
+          <section id="startpage-content">
+            <SlideShow />
+
+            <section className="promo-image-and-did-you-know-card">
+              <img
+                className="dino-promo-image"
+                src={DinoPromo}
+                alt="An image of a T-rex"
+              />
+              <DidYouKnowCard />
+            </section>
+          </section>
+        </main>
+      </section>
 
       <Footer />
     </>

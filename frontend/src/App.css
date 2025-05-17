@@ -1,10 +1,12 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html {
+
+html,
+body {
+  width: 100%;
   overflow-y: auto;
   scrollbar-gutter: stable;
 }
@@ -14,4 +16,40 @@ html {
       overflow-y: scroll;
     }
   }
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#main-content {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  flex: 1;
+}
+
+#startpage-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 11vh;
+}
+
+.promo-image-and-did-you-know-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1.4vw;
+}
+
+.dino-promo-image {
+  max-width: 100%;
+  width: 60%;
+  height: auto;
+  position: relative;
+  left: 0;
+  border-radius: 11px;
 }

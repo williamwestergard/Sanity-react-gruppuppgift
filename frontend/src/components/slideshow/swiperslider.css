@@ -5,6 +5,9 @@
   border-radius: 11px;
   margin-bottom: 5vh;
   color: white;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 .swiper-slide {
@@ -37,4 +40,52 @@
 
 .swiper-pagination-bullet {
   background: white;
+}
+
+.swiper-wrapper {
+  transition: 1s;
+}
+
+.slide-3 {
+  background-image: url("../../assets/featured-dinos-slide.jpg");
+  background-size: cover;
+}
+
+.slide-featured-dinos-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  position: absolute;
+  left: 10vw;
+}
+.slide-featured-dinos-container h2 {
+  font-size: 3rem;
+}
+.slide-featured-dinos-container p {
+  line-height: 4vh;
+  font-size: 1.2rem;
+}
+.slide-featured-dinos-container button {
+  position: relative;
+
+  top: 2vh;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: none;
+  border: none;
+  background-color: white;
+  padding: 1.4vh 1.2vw;
+  font-size: 1.3rem;
+  font-weight: 500;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.slide-featured-dinos-container button:hover {
+  cursor: pointer;
+}
+.slide-featured-dinos-container a {
+  text-decoration: none;
 }

@@ -19,7 +19,7 @@ const router = createBrowserRouter([
   { path: "/time-periods", element: <TimePeriods /> },
   { path: "/dinosaurs-today", element: <DinosaursToday /> },
   { path: "/did-you-know", element: <DidYouKnow /> },
-  { path: "/featured-dinos", element: <FeaturedDinos /> },
+  { path: "/featured-dinosaurs", element: <FeaturedDinos /> },
 
   { path: "/search", element: <Search /> },
 

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./dinosaursindex.css";
 import Navbar from "../../components/navbar/Navbar";
-import Footer from "../../components/footer/Footer.jsx";
 
 import TimeLineFilter from "../../components/timeline-filter/TimeLineFilter.jsx";
 import TimeLineSlider from "../../components/timeline-filter/TimeLineSlider.jsx";
@@ -38,7 +37,6 @@ const DinosaursIndex = () => {
           alt="An image of dinosaurs walking towards the right"
         />
       </section>
-      <Footer />
     </>
   );
 };

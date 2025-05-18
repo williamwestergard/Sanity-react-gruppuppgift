@@ -37,22 +37,22 @@ export default function Search() {
                 Search
               </button>
             </div>
+          </section>
 
-            <section className="search-results">
-              {results.length > 0
-                ? results.map((dino, index) => (
-                    <section key={index} className="dino-card">
-                      <Link
-                        to={`/dinosaurs-index/${encodeURIComponent(dino.name)}`}
-                        className="dino-title"
-                      >
-                        <h2>{dino.name}</h2>
-                      </Link>
-                    </section>
-                  ))
-                : // If the user searched and nothing matched
-                  query && <p>No dinosaurs found.</p>}
-            </section>
+          <section className="search-results">
+            {results.length > 0
+              ? results.map((dino, index) => (
+                  <section key={index} className="dino-card">
+                    <Link
+                      to={`/dinosaurs-index/${encodeURIComponent(dino.name)}`}
+                      className="dino-title"
+                    >
+                      <h2>{dino.name}</h2>
+                    </Link>
+                  </section>
+                ))
+              : // If the user searched and nothing matched
+                query && <p>No dinosaurs found.</p>}
           </section>
         </main>
       </section>

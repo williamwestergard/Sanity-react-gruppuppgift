@@ -7,6 +7,8 @@ import TimeLineFilter from "../../components/timeline-filter/TimeLineFilter.jsx"
 import TimeLineSlider from "../../components/timeline-filter/TimeLineSlider.jsx";
 import ScrollToTop from "../../components/scroll-to-top/ScrollToTop";
 
+import DinoTimePeriodsImage from "../../assets/dino-timeline-image.png";
+
 const DinosaursIndex = () => {
   const [selectedRange, setSelectedRange] = useState([160, 65]);
   return (
@@ -29,6 +31,12 @@ const DinosaursIndex = () => {
             </section>
           </section>
         </main>
+
+        <img
+          className="dino-time-periods-image"
+          src={DinoTimePeriodsImage}
+          alt="An image of dinosaurs walking towards the right"
+        />
       </section>
       <Footer />
     </>

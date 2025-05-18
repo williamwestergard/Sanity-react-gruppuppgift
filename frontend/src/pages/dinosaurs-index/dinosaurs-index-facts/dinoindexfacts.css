@@ -77,3 +77,8 @@
 .dino-facts-diet-bold {
   font-weight: 700;
 }
+
+.dino-time-periods-image {
+  width: 100%;
+  position: relative;
+}

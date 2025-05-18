@@ -19,3 +19,8 @@
   right: 10vw;
   top: 40vh;
 }
+
+.dino-time-periods-image {
+  width: 100%;
+  position: relative;
+}

@@ -9,7 +9,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: #283029;
-  padding: 1.2vh 2.2vw;
+  padding: 0vh 2.2vw;
   border-radius: 0;
 }
 
@@ -25,20 +25,28 @@
   right: 0;
   display: flex;
   justify-content: flex-start;
-  gap: 2.5vw;
+  gap: 1.4vw;
 }
 #navbar a {
   color: white;
   text-decoration: none;
   font-weight: 600;
+  padding: 1vh 1.5vh;
+  border-radius: 2px;
 }
 
 #navbar-right-side a:hover:not(.active-link) {
-  color: #cecece;
+  color: #e8e8e8;
+  background-color: #9c9c9c1d;
+}
+.active-link .navbar-search-icon {
+  fill: black;
+  stroke: black;
 }
 
 #navbar .active-link {
-  color: #b5b5b5;
+  color: #000000;
+  background-color: #cecece;
 }
 
 /* LOGO CSS Madelen */
@@ -49,4 +57,16 @@
   position: relative;
   left: -0.5vw;
   filter: invert(100%);
+}
+
+.navbar-search-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.4vw;
+}
+
+.navbar-search-icon {
+  position: relative;
+  top: -1px;
 }

@@ -5,6 +5,7 @@ import Footer from "../../../components/footer/Footer.jsx";
 import BackArrow from "../../../assets/back-arrow.svg";
 import DinoFactPic from "./img/stego.jpg";
 import ScrollToTop from "../../../components/scroll-to-top/ScrollToTop";
+import DinoTimePeriodsImage from "../../../assets/dino-timeline-image.png";
 
 const DinoIndexFacts = () => {
   return (
@@ -75,7 +76,13 @@ const DinoIndexFacts = () => {
             </section>
           </section>
         </main>
+        <img
+          className="dino-time-periods-image"
+          src={DinoTimePeriodsImage}
+          alt="An image of dinosaurs walking towards the right"
+        />
       </section>
+
       <Footer />
     </>
   );

@@ -26,9 +26,9 @@ export default function App() {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Dino VS Dino!</SwiperSlide>
+        <SwiperSlide>Time Periods</SwiperSlide>
+        <SwiperSlide>Featured Dinosaurs</SwiperSlide>
       </Swiper>
     </>
   );

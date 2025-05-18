@@ -29,6 +29,7 @@ body {
   max-width: 1400px;
   margin: auto;
   flex: 1;
+  margin-bottom: 5vh;
 }
 
 #startpage-content {

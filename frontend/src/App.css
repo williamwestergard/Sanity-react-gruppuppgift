@@ -49,9 +49,10 @@ body {
 .dino-promo-image {
   max-width: 850px;
   height: auto;
-
+  width: 100%;
   height: auto;
   position: relative;
   left: 0;
   border-radius: 11px;
+  filter: drop-shadow(0vh 0.2vh 0.6vh rgba(0, 0, 0, 0.2));
 }

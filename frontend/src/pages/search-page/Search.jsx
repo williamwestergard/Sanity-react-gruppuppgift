@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./search.css";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer.jsx";
@@ -41,7 +42,12 @@ export default function Search() {
               {results.length > 0
                 ? results.map((dino, index) => (
                     <section key={index} className="dino-card">
-                      <h2>{dino.name}</h2>
+                      <Link
+                        to={`/dinosaurs-index/${encodeURIComponent(dino.name)}`}
+                        className="dino-title"
+                      >
+                        <h2>{dino.name}</h2>
+                      </Link>
                     </section>
                   ))
                 : // If the user searched and nothing matched

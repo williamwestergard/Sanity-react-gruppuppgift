@@ -5,6 +5,7 @@
   border-radius: 11px;
   margin-bottom: 5vh;
   color: white;
+  filter: drop-shadow(0vh 0.2vh 0.6vh rgba(0, 0, 0, 0.2));
 }
 
 .swiper-slide {

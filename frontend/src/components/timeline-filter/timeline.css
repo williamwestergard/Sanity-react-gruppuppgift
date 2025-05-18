@@ -32,10 +32,16 @@
   font-weight: 700;
   top: -0.5vh;
   left: 0.5vw;
+  height: 0;
 }
 
 .dino-title {
   margin: 0;
   padding: 0;
+  line-height: 0px;
+}
+
+.dino-card a {
+  color: black;
   line-height: 0px;
 }

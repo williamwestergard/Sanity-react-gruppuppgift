@@ -1,23 +1,28 @@
 import "./dinoindexfacts.css";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Navbar from "../../../components/navbar/Navbar.jsx";
 import Footer from "../../../components/footer/Footer.jsx";
 import BackArrow from "../../../assets/back-arrow.svg";
 import DinoFactPic from "./img/stego.jpg";
 import ScrollToTop from "../../../components/scroll-to-top/ScrollToTop";
 import DinoTimePeriodsImage from "../../../assets/dino-timeline-image.png";
+import MockDinos from "../../../assets/scraped-dinos.json";
 
 const DinoIndexFacts = () => {
+  const { name } = useParams();
+  const decodedName = decodeURIComponent(name);
+  const dino = MockDinos.find((dino) => dino.name === decodedName);
   return (
     <>
       <ScrollToTop />
       <Navbar />
+
       <section className="page-wrapper">
         <main id="main-content">
           <article className="go-back-to-index">
             <Link to="/dinosaurs-index">
               <img src={BackArrow} alt="Arrow Pointing to the Left" />
-              Go back
+              Go to Index
             </Link>
           </article>
 
@@ -32,8 +37,10 @@ const DinoIndexFacts = () => {
 
             <section className="dino-facts-left-side">
               <article className="dino-facts-header">
-                <h1>Stegosaurus</h1>
-                <p>STEG-oh-SORE-us. Name meaning:'roof lizard'</p>
+                <h1>{dino.name}</h1>
+                <p>
+                  Prounciation: {dino.pronunciation}. Meaning: {dino.meaning}
+                </p>
               </article>
 
               <article className="dino-facts-length-period">
@@ -41,37 +48,24 @@ const DinoIndexFacts = () => {
                   <span className="dino-facts-length-period-bold">
                     Length:{" "}
                   </span>
-                  9.2M
+                  {dino.length}
                 </p>
                 <p>
                   <span className="dino-facts-length-period-bold">
                     Period:{" "}
                   </span>
-                  Late Jurassic
+                  {dino.period}
                 </p>
               </article>
 
-              <p>
-                Stegosaurus would have defended itself from predators like
-                Allosaurus and Ceratosaurus with its powerful spiked tail.
-                <br /> <br />
-                The bony plates along its back were embedded in the skin of the
-                animal, not attached to its skeleton, which is why in most
-                fossil finds the plates are separated from the body. When O C
-                Marsh described the first fossil of a Stegosaurus, he concluded
-                that the plates would have lain flat on its back.
-                <br /> <br />
-                After finding a specimen that had been covered with mud, which
-                had held the plates in place, Marsh realised that they stood
-                vertically, alternately on either side of the spine. Scientists
-                are not exactly sure what the plates were used for.
-              </p>
+              <section className="dino-facts-desc">
+                <p>{dino.description} </p>
+              </section>
 
               <article className="dino-facts-diet">
-                <p>
-                  <span className="dino-facts-diet-bold">Diet:</span>{" "}
-                  herbivorous
-                </p>
+                {" "}
+                <span className="dino-facts-diet-bold">Diet: </span>
+                {dino.diet}
               </article>
             </section>
           </section>

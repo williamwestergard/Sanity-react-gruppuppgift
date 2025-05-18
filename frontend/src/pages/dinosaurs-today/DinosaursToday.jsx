@@ -2,10 +2,12 @@ import "./dinosaurstoday.css";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer.jsx";
 import AnimalCard from "./AnimalCard";
+import ScrollToTop from "../../components/scroll-to-top/ScrollToTop";
 
 const DinosaursToday = () => {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <section className="page-wrapper">
         <main id="main-content">

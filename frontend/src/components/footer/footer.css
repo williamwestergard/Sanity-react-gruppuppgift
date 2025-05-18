@@ -10,3 +10,9 @@
   justify-content: center;
   text-align: center;
 }
+
+.dino-logo-animated {
+  width: 150px;
+  height: auto;
+  mix-blend-mode: screen;
+}

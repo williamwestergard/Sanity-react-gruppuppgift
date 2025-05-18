@@ -1,4 +1,5 @@
 import "./didyouknowcard.css";
+import { Link } from "react-router-dom";
 
 export default function DidYouKnowCard() {
   return (
@@ -9,7 +10,9 @@ export default function DidYouKnowCard() {
           <p>The Stegosaurus had a brain the size of a walnut. </p>
         </article>
         <article className="did-you-know-card-read-more">
-          <button className="did-you-know-card-button">Read more</button>
+          <Link to="/did-you-know">
+            <button className="did-you-know-card-button">Read more</button>
+          </Link>
         </article>
       </section>
     </>

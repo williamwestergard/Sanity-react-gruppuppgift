@@ -4,10 +4,12 @@ import Navbar from "../../../components/navbar/Navbar.jsx";
 import Footer from "../../../components/footer/Footer.jsx";
 import BackArrow from "../../../assets/back-arrow.svg";
 import DinoFactPic from "./img/stego.jpg";
+import ScrollToTop from "../../../components/scroll-to-top/ScrollToTop";
 
 const DinoIndexFacts = () => {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <section className="page-wrapper">
         <main id="main-content">

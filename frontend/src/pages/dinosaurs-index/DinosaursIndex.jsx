@@ -5,11 +5,13 @@ import Footer from "../../components/footer/Footer.jsx";
 
 import TimeLineFilter from "../../components/timeline-filter/TimeLineFilter.jsx";
 import TimeLineSlider from "../../components/timeline-filter/TimeLineSlider.jsx";
+import ScrollToTop from "../../components/scroll-to-top/ScrollToTop";
 
 const DinosaursIndex = () => {
   const [selectedRange, setSelectedRange] = useState([160, 65]);
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <section className="page-wrapper">
         <main id="main-content">

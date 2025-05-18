@@ -3,6 +3,7 @@ import "./search.css";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer.jsx";
 import dinoData from "../../assets/scraped-dinos.json";
+import ScrollToTop from "../../components/scroll-to-top/ScrollToTop";
 
 export default function Search() {
   const [query, setQuery] = useState("");
@@ -17,9 +18,10 @@ export default function Search() {
 
   return (
     <>
+      <ScrollToTop />
+      <Navbar />
       <section className="page-wrapper">
         <main id="main-content">
-          <Navbar />
           <section className="search-page">
             <h1>Search Dinosaurs by Name</h1>
             <div className="search-controls">

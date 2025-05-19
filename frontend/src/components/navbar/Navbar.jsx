@@ -41,6 +41,12 @@ const Navbar = () => {
         >
           Search
         </NavLink>
+        <NavLink
+          to="/guess-that-dino"
+          className={({ isActive }) => (isActive ? "active-link" : "")}
+        >
+          Guess That Dino
+        </NavLink>
       </article>
     </section>
   );

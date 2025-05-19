@@ -11,6 +11,8 @@ import Search from "./pages/search-page/Search.jsx";
 import DinosaursIndex from "./pages/dinosaurs-index/DinosaursIndex.jsx";
 import FeaturedDinos from "./pages/featured-dinos/FeaturedDinos.jsx";
 import DinoIndexFacts from "./pages/dinosaurs-index/dinosaurs-index-facts/DinoIndexFacts.jsx";
+import GuessThatDinoPage from "./pages/guess-that-dino/GuessThatDinoPage.jsx";
+
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -20,6 +22,7 @@ const router = createBrowserRouter([
   { path: "/dinosaurs-today", element: <DinosaursToday /> },
   { path: "/did-you-know", element: <DidYouKnow /> },
   { path: "/featured-dinos", element: <FeaturedDinos /> },
+  { path: "/guess-that-dino", element: <GuessThatDinoPage /> },
 
   { path: "/search", element: <Search /> },
 

@@ -70,3 +70,8 @@
   position: relative;
   top: -1px;
 }
+
+#navbar-dino-game {
+  background-color: rgb(88, 104, 92);
+  filter: drop-shadow(0.1vh 0.2vh 0.4vh rgba(0, 0, 0, 0.224));
+}

@@ -1,14 +1,26 @@
-#index-content {
-  margin-top: -30vh;
+#dino-index-content {
+  position: relative;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .index-left-side-content {
-  position: absolute;
-  left: 10vw;
+  position: relative;
+  left: -8vw;
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
+
 .index-right-side-content {
   position: fixed;
   right: 10vw;
-  margin-top: 10vh;
+  top: 40vh;
+}
+
+.dino-time-periods-image {
+  width: 100%;
+  position: relative;
 }

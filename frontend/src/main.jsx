@@ -17,12 +17,13 @@ import GuessThatDinoPage from "./pages/guess-that-dino/GuessThatDinoPage.jsx";
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
   { path: "/dinosaurs-index", element: <DinosaursIndex /> },
-  { path: "/dinosaurs-index-facts", element: <DinoIndexFacts /> },
+  { path: "/dinosaurs-index/:name", element: <DinoIndexFacts /> },
   { path: "/time-periods", element: <TimePeriods /> },
   { path: "/dinosaurs-today", element: <DinosaursToday /> },
   { path: "/did-you-know", element: <DidYouKnow /> },
   { path: "/featured-dinos", element: <FeaturedDinos /> },
   { path: "/guess-that-dino", element: <GuessThatDinoPage /> },
+
 
   { path: "/search", element: <Search /> },
 

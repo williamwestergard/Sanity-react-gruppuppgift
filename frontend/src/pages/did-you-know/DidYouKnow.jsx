@@ -1,4 +1,5 @@
 import "./didyouknow.css";
+import pegomastaxImage from '../../assets/pegomastax.webp';
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer.jsx";
 import ScrollToTop from "../../components/scroll-to-top/ScrollToTop";
@@ -34,7 +35,7 @@ const funFacts = () => {
               </li>
               <li>Dinosaur fossils have been found on all seven continents.</li>
               <li>
-                A dinosaur called the Pegomastax is one of the weirdest
+                A dinosaur called the Pegomastax (illustrated below) is one of the weirdest
                 dinosaurs known. Described as a cross between a parrot and
                 porcupine, it had a beak with teeth that sharpened themselves
                 against each other.
@@ -51,6 +52,11 @@ const funFacts = () => {
                 to 15 m long.
               </li>
             </ul>
+            <img
+              src={pegomastaxImage}
+              alt="Pegomastax Dinosaur"
+              style={{ display: 'block', margin: '2rem auto 0', maxWidth: '300px' }}
+            />
           </section>
         </main>
       </section>

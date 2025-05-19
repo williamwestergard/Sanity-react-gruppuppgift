@@ -1,4 +1,5 @@
 import "./timeline.css";
+import { Link } from "react-router-dom";
 import MockDinos from "../../assets/scraped-dinos.json";
 
 const alphabet = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
@@ -27,7 +28,12 @@ export default function TimeLineFilter({ selectedRange }) {
                 {groupedDinos[letter] && groupedDinos[letter].length > 0 ? (
                   groupedDinos[letter].map((dino) => (
                     <div key={dino.name} className="dino-card">
-                      <p className="dino-title">{dino.name}</p>
+                      <Link
+                        to={`/dinosaurs-index/${encodeURIComponent(dino.name)}`}
+                        className="dino-title"
+                      >
+                        {dino.name}
+                      </Link>
                     </div>
                   ))
                 ) : (

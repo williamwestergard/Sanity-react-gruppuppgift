@@ -15,11 +15,11 @@ import DinoIndexFacts from "./pages/dinosaurs-index/dinosaurs-index-facts/DinoIn
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
   { path: "/dinosaurs-index", element: <DinosaursIndex /> },
-  { path: "/dinosaurs-index-facts", element: <DinoIndexFacts /> },
+  { path: "/dinosaurs-index/:name", element: <DinoIndexFacts /> },
   { path: "/time-periods", element: <TimePeriods /> },
   { path: "/dinosaurs-today", element: <DinosaursToday /> },
   { path: "/did-you-know", element: <DidYouKnow /> },
-  { path: "/featured-dinos", element: <FeaturedDinos /> },
+  { path: "/featured-dinosaurs", element: <FeaturedDinos /> },
 
   { path: "/search", element: <Search /> },
 

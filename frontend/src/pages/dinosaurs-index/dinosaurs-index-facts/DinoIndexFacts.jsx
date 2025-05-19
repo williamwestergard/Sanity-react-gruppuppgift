@@ -1,7 +1,6 @@
 import "./dinoindexfacts.css";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "../../../components/navbar/Navbar.jsx";
-import Footer from "../../../components/footer/Footer.jsx";
 import BackArrow from "../../../assets/back-arrow.svg";
 // import DinoFactPic from "./img/stego.jpg";
 import ScrollToTop from "../../../components/scroll-to-top/ScrollToTop";
@@ -76,7 +75,6 @@ const DinoIndexFacts = () => {
           alt="An image of dinosaurs walking towards the right"
         />
       </section>
-      <Footer />
     </>
   );
 };

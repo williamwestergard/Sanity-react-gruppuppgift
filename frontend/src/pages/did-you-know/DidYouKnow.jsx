@@ -1,5 +1,6 @@
 import "./didyouknow.css";
 import Navbar from "../../components/navbar/Navbar";
+
 const funFacts = () => {
   return (
     <>

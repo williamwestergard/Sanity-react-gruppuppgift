@@ -1,6 +1,6 @@
 import "./timeline.css";
 import { Link } from "react-router-dom";
-import MockDinos from "../../assets/scraped-dinos.json";
+import MockDinos from "../../assets/db-with-img.json";
 
 const alphabet = [..."ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
 

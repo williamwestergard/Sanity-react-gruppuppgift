@@ -96,6 +96,7 @@ const Navbar = () => {
           </article>
         </NavLink>
         <NavLink
+          id="navbar-dino-game"
           to="/guess-that-dino"
           className={({ isActive }) => (isActive ? "active-link" : "")}
         >

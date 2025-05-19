@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./search.css";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer.jsx";
-import dinoData from "../../assets/scraped-dinos.json";
+import dinoData from "../../assets/db-with-img.json";
 import ScrollToTop from "../../components/scroll-to-top/ScrollToTop";
 
 export default function Search() {

@@ -1,3 +1,10 @@
+.dino-game-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .guess-dino-game {
   max-width: 420px;
   margin: 2rem auto;
@@ -9,15 +16,11 @@
 }
 
 .pokemon-heading {
-  font-family: 'Arial Black', 'Comic Sans MS', Impact, sans-serif;
+  font-family: "Arial Black", "Comic Sans MS", Impact, sans-serif;
   font-size: 2.3rem;
   color: #ffcb05;
-  text-shadow:
-    -3px -3px 0 #2a75bb,
-    3px -3px 0 #2a75bb,
-    -3px 3px 0 #2a75bb,
-    3px 3px 0 #2a75bb,
-    0 0 10px #2a75bb;
+  text-shadow: -3px -3px 0 #2a75bb, 3px -3px 0 #2a75bb, -3px 3px 0 #2a75bb,
+    3px 3px 0 #2a75bb, 0 0 10px #2a75bb;
   letter-spacing: 2px;
   margin-bottom: 1.2rem;
   margin-top: 0.5rem;
@@ -39,8 +42,8 @@
   transition: filter 0.3s;
   z-index: 1;
   position: absolute;
-  left: -0px;   /* Move image to the left */
-  top: 10px;    /* Center vertically, adjust as needed */
+  left: -0px; /* Move image to the left */
+  top: 10px; /* Center vertically, adjust as needed */
   height: 65%;
   width: 65%;
 }
@@ -48,7 +51,7 @@
 /* Red diagonal line to cross out Pokémon text */
 .crossout {
   position: absolute;
-  top:80%;
+  top: 80%;
   right: 18px; /* Adjust to match the "Pokémon" text position */
   bottom: 22px; /* Adjust as needed */
   width: 150px;
@@ -136,19 +139,37 @@
 
 /* Animations */
 @keyframes pop {
-  0% { transform: scale(1); }
-  60% { transform: scale(1.12); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes shake {
-  0% { transform: translateX(0); }
-  30% { transform: translateX(-6px); }
-  60% { transform: translateX(6px); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-6px);
+  }
+  60% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

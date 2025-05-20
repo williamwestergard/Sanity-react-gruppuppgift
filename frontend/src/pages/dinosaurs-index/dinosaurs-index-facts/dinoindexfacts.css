@@ -4,7 +4,7 @@
   align-items: center;
   align-content: center;
   position: relative;
-  left: -7vw;
+  margin-left: 5vw;
   margin-top: 13vh;
 }
 .go-back-to-index a {
@@ -12,7 +12,7 @@
   text-transform: uppercase;
   align-content: center;
   color: black;
-  font-size: 1.3rem;
+  font-size: clamp(1.1rem, 1.4vw, 1.2rem);
   font-weight: 700;
   text-decoration: none;
 }
@@ -26,14 +26,23 @@
   text-align: left;
   justify-content: center;
   align-items: center;
+  width: 90%;
+  margin: auto;
   margin-top: 5vh;
+}
+
+.dino-facts-name {
+  font-family: "Texturina", serif;
+  font-weight: 700;
+  font-size: clamp(3rem, 3vw, 3.5rem);
 }
 
 .dino-fact-image {
   mix-blend-mode: multiply;
-  width: 100%;
+  width: 90%;
   position: relative;
   top: 5.5vh;
+  border-radius: 8px;
 }
 .dino-facts-right-side {
   width: 50%;
@@ -42,10 +51,12 @@
 
 .dino-facts-left-side {
   width: 50%;
+  margin-left: 5vw;
+  margin-top: 1vh;
 }
 
 .dino-facts-header h1 {
-  line-height: 8.5vh;
+  line-height: 9.5vh;
   margin: 0;
   padding: 0;
 }
@@ -53,7 +64,7 @@
 .dino-facts-length-period {
   margin-top: 3vh;
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: clamp(1.2rem, 1.1vw, 1.3rem);
   line-height: 4vh;
   margin-bottom: 5vh;
 }
@@ -65,7 +76,7 @@
   position: absolute;
   margin-top: 5vh;
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: clamp(1.1rem, 1vw, 1.2rem);
   font-weight: 300;
   letter-spacing: 1px;
   color: white;
@@ -81,4 +92,68 @@
 .dino-time-periods-image {
   width: 100%;
   position: relative;
+}
+
+/**  Responsive design **/
+@media screen and (max-width: 900px) {
+  .go-back-to-index span {
+    position: relative;
+    top: -2px;
+  }
+  .go-back-to-index img {
+    margin-right: 2vw;
+  }
+
+  #dino-facts-content {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    margin-top: 5vh;
+  }
+  .dino-fact-image {
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+    width: 100%;
+    mix-blend-mode: normal;
+  }
+  .dino-facts-left-side {
+    width: 90%;
+    margin-left: 0vw;
+  }
+  .dino-facts-right-side {
+    width: 90%;
+    margin-left: 0vw;
+  }
+}
+@media screen and (max-width: 340px) {
+  .go-back-to-index span {
+    position: relative;
+    top: -2px;
+  }
+  .go-back-to-index img {
+    margin-right: 2vw;
+  }
+  .go-back-to-index {
+    margin-top: 20vh;
+  }
+  #dino-facts-content {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    margin-top: 5vh;
+  }
+  .dino-fact-image {
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+    width: 100%;
+    mix-blend-mode: normal;
+  }
+  .dino-facts-left-side {
+    width: 90%;
+    margin-left: 0vw;
+  }
+  .dino-facts-right-side {
+    width: 90%;
+    margin-left: 0vw;
+  }
 }

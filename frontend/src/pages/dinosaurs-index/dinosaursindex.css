@@ -6,11 +6,13 @@
 .dino-index-title {
   font-family: "Texturina", serif;
   font-weight: 700;
-  font-size: clamp(2.5rem, 2.5vw, 3rem);
+  font-size: clamp(2.5rem, 2.5vw, 2.8rem);
 }
 
 .index-left-side-content {
   position: relative;
+  margin-left: 3vw;
+  margin-top: 4vh;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -21,22 +23,17 @@
   top: 40vh;
   width: clamp(300px, 26vw, 500px);
   right: 10vw;
+  position: fixed;
   text-align: center;
-}
-.index-right-side-content.fixed {
-  position: fixed;
-}
-
-.index-right-side-content.absolute {
-  position: fixed;
-  bottom: 100px;
 }
 
 .dino-time-periods-image {
   width: 100%;
   position: relative;
+  pointer-events: none;
 }
 
+/**  Responsive design **/
 @media screen and (max-width: 900px) {
   .index-right-side-content {
     top: 10vh;

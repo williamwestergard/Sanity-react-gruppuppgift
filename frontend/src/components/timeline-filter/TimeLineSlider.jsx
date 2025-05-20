@@ -3,24 +3,30 @@ import "./timeline.css";
 
 export default function TimeLineSlider({ selectedRange, setSelectedRange }) {
   return (
-    <div className="dino-container">
+    <div className="sort-by-time-period-container">
       <section id="timeline-container">
-        <div className="p-6 max-w-5xl mx-auto">
-          <h1 className="text-4xl font-bold mb-6 text-center">
-            Sort by Time Period
-          </h1>
-          <p className="text-lg mb-8 text-center text-gray-700">
-            Use the slider below to explore which dinosaurs lived during
-            specific periods of time.
-          </p>
+        <div>
+          <h2 className="sort-by-time-period">
+            Sort by{" "}
+            <span className="sort-by-time-period-bold">Time Period</span>
+          </h2>
         </div>
       </section>
 
-      <p className="dino-description">
-        Showing dinosaurs from <strong>{selectedRange[0]}</strong> to{" "}
-        <strong>{selectedRange[1]}</strong> million years ago.
+      <p className="sort-by-time-period-desc">
+        Showing dinosaurs from:
+        <br />
+        <section className="sort-by-time-period-numbers">
+          <strong>{selectedRange[0]}</strong> -{" "}
+          <strong>{selectedRange[1]}</strong>
+        </section>
+        <span className="sort-by-time-period-years">million years ago.</span>
       </p>
       <Slider
+        className="sort-by-time-period-slider"
+        sx={{
+          color: "#6b9d7e",
+        }}
         value={selectedRange}
         onChange={(e, newValue) =>
           setSelectedRange(newValue.sort((a, b) => b - a))

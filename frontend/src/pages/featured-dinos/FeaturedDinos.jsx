@@ -12,6 +12,7 @@ const FeaturedDinos = () => {
     <>
       <ScrollToTop />
       <Navbar />
+
       <section className="page-wrapper">
         <main id="main-content">
           <main id="featured-dinos-content">

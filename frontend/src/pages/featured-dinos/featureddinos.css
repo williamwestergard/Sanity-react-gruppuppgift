@@ -1,3 +1,18 @@
+#featured-dinos-content {
+  opacity: 0%;
+  animation: featureddinointroanimation 1s forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes featureddinointroanimation {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
 .featured-dinos-list {
   z-index: 2;
   display: flex;
@@ -27,14 +42,15 @@
   left: 56%;
   transform: translate(-50%, -50%);
   width: 53%;
-  animation: featureddinoanimation 0.7s forwards;
+  animation: featureddinoanimation 0.9s forwards;
+  opacity: 0%;
   animation-timing-function: ease-out;
 }
 
 @keyframes featureddinoanimation {
   0% {
     opacity: 0%;
-    top: 61%;
+    top: 60%;
   }
   100% {
     opacity: 100%;
@@ -197,6 +213,7 @@
     transform: translate(-50%, -50%);
     width: 95%;
     animation: none;
+    opacity: 100%;
   }
 
   .feature-dino-image-bg {

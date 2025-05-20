@@ -95,6 +95,21 @@ const Navbar = () => {
             </svg>
           </article>
         </NavLink>
+
+        <NavLink
+          to="/dino-vs-dino"
+          className={({ isActive }) => (isActive ? "active-link" : "")}
+        >
+          Dino vs Dino
+        </NavLink>
+
+        <NavLink
+          to="/dino-rpg"
+          className={({ isActive }) => (isActive ? "active-link" : "")}
+        >
+          Dino RPG
+        </NavLink>
+
         <NavLink
           id="navbar-dino-game"
           to="/guess-that-dino"

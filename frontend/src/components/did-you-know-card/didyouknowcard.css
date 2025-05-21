@@ -1,5 +1,8 @@
 .did-you-know-card-container {
-  background-color: #506450;
+  background-image: url(/images/philosiraptor.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   width: 100%;
   height: auto;
   border-radius: 11px;
@@ -11,7 +14,6 @@
 .did-you-know-card-info {
   text-align: left;
   width: 30%;
-
   padding: 2vh;
   color: white;
 }
@@ -20,5 +22,9 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  padding: 0.5vw 2vh;
+  padding: 0.5vw 2vh; 
+}
+
+.did-you-know-card-read-more a:hover {
+  cursor: pointer;
 }

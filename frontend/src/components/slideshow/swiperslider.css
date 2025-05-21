@@ -186,6 +186,7 @@
 
 .slide-dino-vs-dino-container p {
   font-size: 1.2rem;
+  line-height: 4vh;
   color: white;
   text-shadow: 1px 1px 2px black;
 }

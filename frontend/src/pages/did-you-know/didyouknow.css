@@ -1,11 +1,29 @@
+.DYK {
+  position: relative; /* or just remove position */
+  margin: 6rem auto 2rem auto; /* more space on top, less at bottom */
+  background-color: white;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-size: 1rem;
+  color: #1e1e1e;
+  max-width: 700px;
+  width: 90vw;
+}
+
+
+.DYK h2 {
+  margin-bottom: 1.5rem; /* Add space between the title and the list */
+}
+
 .DYK ul {
   list-style-type: "🦖 ";
-  padding-left: 24px;
+  padding-left: 1.2rem;
   text-align: left;
   display: inline-block;
 }
 
 .DYK li {
-  margin: 10px 0;
-  line-height: 1.5;
+  margin: 8px 0;
+  line-height: 1.6;
 }

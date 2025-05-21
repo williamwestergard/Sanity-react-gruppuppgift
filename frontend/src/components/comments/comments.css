@@ -1,0 +1,29 @@
+.comments-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border-radius: 8px;
+  width: 100%;
+  margin: auto;
+}
+
+.comments-form-name {
+  height: auto;
+  width: 50%;
+  padding: 1vh;
+}
+
+.comments-form-text {
+  height: 20vh;
+  width: 50%;
+  padding: 1vh;
+}
+
+.comments-form-submit-button {
+  background-color: rgb(33, 52, 52);
+  color: white;
+  margin-top: 3vh;
+  padding: 1vh 2vw;
+}

@@ -1,0 +1,175 @@
+.dino-game-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.guess-dino-game {
+  max-width: 420px;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  background: #f7f7fa;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px #0002;
+  text-align: center;
+}
+
+.pokemon-heading {
+  font-family: "Arial Black", "Comic Sans MS", Impact, sans-serif;
+  font-size: 2.3rem;
+  color: #ffcb05;
+  text-shadow: -3px -3px 0 #2a75bb, 3px -3px 0 #2a75bb, -3px 3px 0 #2a75bb,
+    3px 3px 0 #2a75bb, 0 0 10px #2a75bb;
+  letter-spacing: 2px;
+  margin-bottom: 1.2rem;
+  margin-top: 0.5rem;
+  animation: pop 0.5s;
+  text-align: center;
+}
+
+.dino-image-silhouette {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 2px 16px #0004;
+  border: 4px solid #2196f3;
+  margin-bottom: 1.5rem;
+}
+
+.dino-silhouette {
+  filter: brightness(0) saturate(100%) invert(0) grayscale(1);
+  transition: filter 0.3s;
+  z-index: 1;
+  position: absolute;
+  left: -0px; /* Move image to the left */
+  top: 10px; /* Center vertically, adjust as needed */
+  height: 65%;
+  width: 65%;
+}
+
+/* Red diagonal line to cross out Pokémon text */
+.crossout {
+  position: absolute;
+  top: 80%;
+  right: 18px; /* Adjust to match the "Pokémon" text position */
+  bottom: 22px; /* Adjust as needed */
+  width: 150px;
+  height: 0;
+  border-bottom: 10px solid #000000;
+  transform: rotate(-8deg);
+  z-index: 2;
+  pointer-events: none;
+  box-shadow: 1px 1px 6px #0008;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.options button {
+  padding: 1rem 1.5rem;
+  font-size: 1.15rem;
+  border: none;
+  border-radius: 0.75rem;
+  background: #e3eafc;
+  color: #222;
+  font-weight: 600;
+  box-shadow: 0 2px 8px #0001;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+}
+
+.options button:hover:not(:disabled) {
+  background: #bbdefb;
+  transform: scale(1.04);
+}
+
+.options button.correct {
+  background: #43a047;
+  color: #fff;
+  animation: pop 0.2s;
+}
+
+.options button.wrong {
+  background: #e53935;
+  color: #fff;
+  animation: shake 0.2s;
+}
+
+.options button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.result {
+  margin: 1rem 0 0.5rem 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #222;
+  animation: fadeIn 0.3s;
+}
+
+.result button {
+  margin-top: 0.7rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: #2196f3;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.result button:hover {
+  background: #1565c0;
+}
+
+.score {
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
+  color: #444;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Animations */
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(-6px);
+  }
+  60% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

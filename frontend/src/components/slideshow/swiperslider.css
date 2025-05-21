@@ -89,3 +89,63 @@
 .slide-featured-dinos-container a {
   text-decoration: none;
 }
+
+/* Time Period slide */
+.slide-time-periods {
+  background-image: url("../../assets/jurassic-time-period-slide.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slide-time-periods-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  position: absolute;
+  left: 10vw;
+}
+
+/* .text-background-time-periods {
+  background-color: rgba(0, 0, 0, 0.432); 
+  padding: 2vh 2vw;
+  border-radius: 10px;
+  max-width: 80%;
+} */
+
+.slide-time-periods-container h2 {
+  font-size: 3rem;
+  color: white;
+}
+
+.slide-time-periods-container p {
+  line-height: 4vh;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.slide-time-periods-container button {
+  position: relative;
+  top: 2vh;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: none;
+  border: none;
+  background-color: white;
+  padding: 1.4vh 1.2vw;
+  font-size: 1.3rem;
+  font-weight: 500;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.slide-time-periods-container button:hover {
+  cursor: pointer;
+}
+
+.slide-time-periods-container a {
+  text-decoration: none;
+}

@@ -18,20 +18,20 @@ const Footer = () => {
           </article>
 
           <section className="footer-section-1">
-            <h3>Explore</h3>
+            <h3 className="footer-h3">Explore</h3>
             <NavLink to="/dinosaurs-index">Dinosaurs Index</NavLink>
             <NavLink to="/time-periods">Time Periods</NavLink>
             <NavLink to="/dinosaurs-today">Dinosaurs Today</NavLink>
             <NavLink to="/did-you-know">Did you know?</NavLink>
           </section>
           <section className="footer-section-2">
-            <h3>Games</h3>
+            <h3 className="footer-h3">Games</h3>
             <NavLink to="/guess-that-dino">Guess that dino</NavLink>
             <NavLink to="/dino-rpg">Dino RPG</NavLink>
             <NavLink to="/dino-vs-dino">Dino VS Dino</NavLink>
           </section>
           <section className="footer-section-3">
-            <h3>The team</h3>
+            <h3 className="footer-h3">The team</h3>
             <NavLink to="/about-us">About Us</NavLink>
             <NavLink to="/blog">Blog</NavLink>
           </section>

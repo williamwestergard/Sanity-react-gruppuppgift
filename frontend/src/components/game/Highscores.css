@@ -1,0 +1,74 @@
+.highscores-container {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+.highscores-title {
+  color: #eaf7d0;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.highscores-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.highscore-item {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+  background: rgba(234, 247, 208, 0.1);
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.highscore-item:hover {
+  transform: translateX(5px);
+  background: rgba(234, 247, 208, 0.15);
+}
+
+.rank {
+  font-weight: bold;
+  color: #43a047;
+  margin-right: 1rem;
+  min-width: 2.5rem;
+}
+
+.player-name {
+  flex: 1;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skull-icon {
+  font-size: 1.2rem;
+}
+
+.player-stats {
+  color: #b6d99a;
+  font-size: 0.9rem;
+}
+
+.highscores-loading {
+  text-align: center;
+  color: #eaf7d0;
+  padding: 2rem;
+  font-style: italic;
+}
+
+.no-scores {
+  text-align: center;
+  color: #b6d99a;
+  font-style: italic;
+  padding: 1rem;
+} 

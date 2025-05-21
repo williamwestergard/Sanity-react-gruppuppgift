@@ -1,10 +1,8 @@
 import "./blog.css";
-import { Link, useParams } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer.jsx";
 import ScrollToTop from "../../components/scroll-to-top/ScrollToTop";
-import BlogPost from "./BlogPost.jsx";
-import BackArrow from "../../assets/back-arrow.svg";
+import BlogPostCard from "./BlogPostCard.jsx";
 
 const Blog = () => {
   return (
@@ -28,7 +26,8 @@ const Blog = () => {
               <p> Dino content</p>
             </section>
 
-            <BlogPost />
+            <BlogPostCard />
+
             <br />
             <br />
           </section>

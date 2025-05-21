@@ -90,6 +90,41 @@
   display: none;
 }
 
+.dropdown-navbar {
+  float: left;
+  overflow: hidden;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+.dropdown-navbar-button {
+  background: none;
+  border: none;
+  background-color: rgb(88, 104, 92);
+  filter: drop-shadow(0.1vh 0.2vh 0.4vh rgba(0, 0, 0, 0.224));
+  color: white;
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  font-weight: 600;
+  padding: 1vh 2vh;
+  border-radius: 3px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1f211fe9;
+  right: 0vh;
+  top: 4vh;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 10000000;
+}
+.dropdown-navbar:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
 /**  Responsive design **/
 @media screen and (max-width: 900px) {
   #hamburger-menu {

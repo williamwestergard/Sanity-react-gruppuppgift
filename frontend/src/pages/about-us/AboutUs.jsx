@@ -1,5 +1,7 @@
 import "../about-us/aboutus.css";
+import Footer from "../../components/footer/Footer.jsx";
 import Navbar from "../../components/navbar/Navbar";
+import ScrollToTop from "../../components/scroll-to-top/ScrollToTop";
 import Velociraptor from "../../assets/velociraptor.png";
 import Trex from "../../assets/t-rex.png";
 import Dilophosaurus from "../../assets/dilophosaurus.png";
@@ -10,6 +12,7 @@ import Fossil from "../../assets/fossil.png";
 const aboutUs = () => {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <section className="about-us">
         <h2 className="title">About Us</h2>
@@ -64,6 +67,7 @@ const aboutUs = () => {
         <p>Simon:</p>
         <a href="https://github.com/KarlSimonB">GitHub</a>
       </section>
+      <Footer />
     </>
   );
 };

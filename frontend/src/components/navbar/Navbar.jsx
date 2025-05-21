@@ -124,27 +124,30 @@ const Navbar = () => {
             </article>
           </NavLink>
 
-          <NavLink
-            to="/dino-vs-dino"
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-          >
-            Dino vs Dino
-          </NavLink>
-
-          <NavLink
-            to="/dino-rpg"
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-          >
-            Dino RPG
-          </NavLink>
-
-          <NavLink
-            id="navbar-dino-game"
-            to="/guess-that-dino"
-            className={({ isActive }) => (isActive ? "active-link" : "")}
-          >
-            Guess That Dino
-          </NavLink>
+          <section className="dropdown-navbar">
+            <button className="dropdown-navbar-button">Games</button>
+            <section className="dropdown-content">
+              <NavLink
+                to="/dino-vs-dino"
+                className={({ isActive }) => (isActive ? "active-link" : "")}
+              >
+                Dino vs Dino
+              </NavLink>
+              <NavLink
+                to="/dino-rpg"
+                className={({ isActive }) => (isActive ? "active-link" : "")}
+              >
+                Dino RPG
+              </NavLink>
+              <NavLink
+                id="navbar-dino-game"
+                to="/guess-that-dino"
+                className={({ isActive }) => (isActive ? "active-link" : "")}
+              >
+                Guess That Dino
+              </NavLink>
+            </section>
+          </section>
         </article>
         {menuOpen ? (
           // Close Icon

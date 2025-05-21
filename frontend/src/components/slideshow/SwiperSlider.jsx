@@ -28,7 +28,22 @@ export default function App() {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>Dino VS Dino!</SwiperSlide>
+        <SwiperSlide className="slide-dino-vs-dino">
+          <section className="slide-dino-vs-dino-container">
+            <section className="text-background-dino-vs-dino">
+              <h2> Dino VS Dino </h2>
+              <br></br>
+              <p>
+                Want to know which dinosaur is the best?
+                <br />
+                Check out our Dino VS Dino section!
+              </p>
+              <Link to="/dino-vs-dino">
+                <button>Battle</button>
+              </Link>
+              </section>
+            </section>
+          </SwiperSlide>
         <SwiperSlide className="slide-time-periods">
           <section className="slide-time-periods-container">
             <section className="text-background-time-periods">

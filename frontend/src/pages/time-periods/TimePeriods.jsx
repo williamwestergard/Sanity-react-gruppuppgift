@@ -34,7 +34,7 @@ export default function TimePeriod() {
             </section>
 
             <section className="time-period">
-              <h2>Jurrasic Period</h2>
+              <h2>Jurassic Period</h2>
               <p>
                 The Jurassic period lasted from about{" "}
                 <strong>201 to 145 million years ago</strong>. During this time,

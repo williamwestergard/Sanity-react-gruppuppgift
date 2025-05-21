@@ -1,0 +1,74 @@
+.dino-rpg-container {
+  max-width: 420px;
+  margin: 3rem auto;
+  padding: 2.5rem 1.5rem;
+  background: #b6d99a;
+  border: 6px solid #3a5c2c;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px #0004, 0 0 0 8px #7fa86b inset;
+  font-family: 'VT323', 'Consolas', 'Courier New', monospace;
+  color: #234d20;
+  text-align: center;
+}
+
+.pokemon-heading {
+  font-family: 'VT323', 'Consolas', 'Courier New', monospace;
+  font-size: 2.5rem;
+  color: #234d20;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px #7fa86b, 0 0 8px #fff8;
+}
+
+form label {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+input[type="text"] {
+  background: #eaf7d0;
+  border: 2px solid #3a5c2c;
+  border-radius: 0.4rem;
+  font-family: inherit;
+  font-size: 1.3rem;
+  padding: 0.3rem 0.7rem;
+  color: #234d20;
+  outline: none;
+  margin-left: 0.5rem;
+  box-shadow: 0 2px #7fa86b inset;
+}
+
+input[type="text"]:focus {
+  border-color: #234d20;
+  background: #d2e7b2;
+}
+
+button[type="submit"] {
+  background: #3a5c2c;
+  color: #eaf7d0;
+  border: 2px solid #234d20;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.4rem 1.2rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px #7fa86b inset;
+  transition: background 0.2s, color 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: #234d20;
+  color: #b6d99a;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #234d20;
+  text-shadow: 0 2px #7fa86b;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');

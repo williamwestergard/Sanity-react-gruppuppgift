@@ -6,13 +6,13 @@
   border: 6px solid #3a5c2c;
   border-radius: 1.5rem;
   box-shadow: 0 8px 32px #0004, 0 0 0 8px #7fa86b inset;
-  font-family: 'VT323', 'Consolas', 'Courier New', monospace;
+  font-family: "VT323", "Consolas", "Courier New", monospace;
   color: #234d20;
   text-align: center;
 }
 
 .pokemon-heading {
-  font-family: 'VT323', 'Consolas', 'Courier New', monospace;
+  font-family: "VT323", "Consolas", "Courier New", monospace;
   font-size: 2.5rem;
   color: #234d20;
   letter-spacing: 2px;
@@ -63,7 +63,7 @@ button[type="submit"]:hover {
   color: #b6d99a;
 }
 
-h3 {
+.dino-rpg-container h3 {
   font-size: 2rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -71,4 +71,4 @@ h3 {
   text-shadow: 0 2px #7fa86b;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");

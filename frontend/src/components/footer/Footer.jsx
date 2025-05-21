@@ -27,6 +27,8 @@ const Footer = () => {
           <section className="footer-section-2">
             <h3>Games</h3>
             <NavLink to="/guess-that-dino">Guess that dino</NavLink>
+            <NavLink to="/dino-rpg">Dino RPG</NavLink>
+            <NavLink to="/dino-vs-dino">Dino VS Dino</NavLink>
           </section>
           <section className="footer-section-3">
             <h3>The team</h3>

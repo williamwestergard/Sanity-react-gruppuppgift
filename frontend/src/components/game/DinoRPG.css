@@ -29,7 +29,7 @@
   position: relative;
 }
 
-.dino-card {
+/* .dino-card {
   background: rgba(234, 247, 208, 0.1);
   padding: 1.5rem;
   border-radius: 15px;
@@ -41,7 +41,7 @@
 
 .dino-card:hover {
   transform: translateY(-5px);
-}
+} */
 
 .dino-image {
   width: 150px;
@@ -366,8 +366,12 @@
 }
 
 @keyframes rainbow-effect {
-  0% { filter: hue-rotate(0deg); }
-  100% { filter: hue-rotate(360deg); }
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
 
 /* Attack effects */
@@ -388,29 +392,60 @@
 }
 
 @keyframes rainbow-damage {
-  0% { color: red; }
-  25% { color: yellow; }
-  50% { color: green; }
-  75% { color: blue; }
-  100% { color: purple; }
+  0% {
+    color: red;
+  }
+  25% {
+    color: yellow;
+  }
+  50% {
+    color: green;
+  }
+  75% {
+    color: blue;
+  }
+  100% {
+    color: purple;
+  }
 }
 
 @keyframes explosion {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(2); opacity: 0.5; }
-  100% { transform: scale(1); opacity: 1; }
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes laser {
-  0% { clip-path: inset(0 100% 0 0); }
-  50% { clip-path: inset(0 0 0 0); }
-  100% { clip-path: inset(0 0 0 100%); }
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  50% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 100%);
+  }
 }
 
 @keyframes matrix {
-  0% { text-shadow: 2px 2px 0 #0f0; }
-  50% { text-shadow: -2px -2px 0 #0f0; }
-  100% { text-shadow: 2px 2px 0 #0f0; }
+  0% {
+    text-shadow: 2px 2px 0 #0f0;
+  }
+  50% {
+    text-shadow: -2px -2px 0 #0f0;
+  }
+  100% {
+    text-shadow: 2px 2px 0 #0f0;
+  }
 }
 
 .inventory-item {
@@ -463,26 +498,38 @@
 
 /* Attack Animations */
 @keyframes shake {
-  0%, 100% { transform: translate(0, 0); }
-  25% { transform: translate(-5px, 0); }
-  75% { transform: translate(5px, 0); }
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-5px, 0);
+  }
+  75% {
+    transform: translate(5px, 0);
+  }
 }
 
 @keyframes flash {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 
 @keyframes hitEffect {
-  0% { 
+  0% {
     transform: scale(0);
     opacity: 1;
   }
-  50% { 
+  50% {
     transform: scale(1.2);
     opacity: 0.8;
   }
-  100% { 
+  100% {
     transform: scale(2);
     opacity: 0;
   }
@@ -516,7 +563,11 @@
   pointer-events: none;
   width: 40px;
   height: 40px;
-  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
   animation: hitEffect 0.5s ease-out forwards;
 }
 
@@ -526,53 +577,53 @@
 
 /* Effect Animations */
 @keyframes fireEffect {
-  0% { 
+  0% {
     filter: drop-shadow(0 0 2px #ff4d4d) brightness(1);
     transform: scale(1);
   }
-  50% { 
+  50% {
     filter: drop-shadow(0 0 8px #ff4d4d) brightness(1.2);
     transform: scale(1.05);
   }
-  100% { 
+  100% {
     filter: drop-shadow(0 0 2px #ff4d4d) brightness(1);
     transform: scale(1);
   }
 }
 
 @keyframes iceEffect {
-  0% { 
+  0% {
     filter: drop-shadow(0 0 2px #4dc3ff) brightness(1);
     opacity: 0.7;
   }
-  50% { 
+  50% {
     filter: drop-shadow(0 0 8px #4dc3ff) brightness(1.2);
     opacity: 1;
   }
-  100% { 
+  100% {
     filter: drop-shadow(0 0 2px #4dc3ff) brightness(1);
     opacity: 0.7;
   }
 }
 
 @keyframes thunderEffect {
-  0% { 
+  0% {
     filter: drop-shadow(0 0 2px #ffeb3b) brightness(1);
     transform: translateY(0);
   }
-  25% { 
+  25% {
     filter: drop-shadow(0 0 8px #ffeb3b) brightness(1.5);
     transform: translateY(-2px);
   }
-  50% { 
+  50% {
     filter: drop-shadow(0 0 2px #ffeb3b) brightness(1);
     transform: translateY(0);
   }
-  75% { 
+  75% {
     filter: drop-shadow(0 0 8px #ffeb3b) brightness(1.5);
     transform: translateY(-1px);
   }
-  100% { 
+  100% {
     filter: drop-shadow(0 0 2px #ffeb3b) brightness(1);
     transform: translateY(0);
   }

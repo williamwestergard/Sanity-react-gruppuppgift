@@ -4,7 +4,6 @@ import Footer from "../../components/footer/Footer.jsx";
 import ScrollToTop from "../../components/scroll-to-top/ScrollToTop";
 import BlogPost from "./BlogPost.jsx";
 import BlogPostCard from "./BlogPostCard.jsx";
-import Comments from "../../components/comments/comments.jsx";
 
 const Blog = () => {
   return (
@@ -31,11 +30,6 @@ const Blog = () => {
             {/* <BlogPostCard /> */}
 
             <BlogPost />
-            <section className="blog-post-comments">
-              <h3>Leave a comment!</h3>
-              <br />
-              <Comments />
-            </section>
           </section>
         </main>
       </section>

@@ -11,7 +11,7 @@ export default function DidYouKnowCard() {
         </article>
         <article className="did-you-know-card-read-more">
           <Link to="/did-you-know">
-            <button className="did-you-know-card-button">Read more</button>
+            <button className="did-you-know-card-button">Would you like to know more?</button>
           </Link>
         </article>
       </section>

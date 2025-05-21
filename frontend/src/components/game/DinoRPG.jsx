@@ -995,7 +995,7 @@ export default function DinoRPG() {
 
   return (
     <div className="dino-rpg-container">
-      <h2 className="pokemon-heading">Dino RPG</h2>
+      <h2 className="pokemon-heading">Dino RPG - Hardcore Mode</h2>
       {!registered ? (
         <>
           <div className="login-container">

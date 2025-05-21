@@ -3,6 +3,7 @@ import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer.jsx";
 import ScrollToTop from "../../components/scroll-to-top/ScrollToTop";
 import BlogPost from "./BlogPost.jsx";
+import BlogPostCard from "./BlogPostCard.jsx";
 import Comments from "../../components/comments/comments.jsx";
 
 const Blog = () => {
@@ -26,6 +27,9 @@ const Blog = () => {
 
               <p> Dino content</p>
             </section>
+
+            {/* <BlogPostCard /> */}
+
             <BlogPost />
             <section className="blog-post-comments">
               <h3>Leave a comment!</h3>

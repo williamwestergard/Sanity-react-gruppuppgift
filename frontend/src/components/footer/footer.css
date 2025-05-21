@@ -62,6 +62,7 @@
   letter-spacing: 0.5px;
   text-decoration: none;
   width: auto;
+  text-align: left;
 }
 .footer-section-1 a:hover,
 .footer-section-2 a:hover,

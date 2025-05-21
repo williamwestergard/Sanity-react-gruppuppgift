@@ -6,6 +6,7 @@ import Dilophosaurus from '../../assets/dilophosaurus.png';
 import Pteranodon from '../../assets/pteranodon.png';
 import DinoEggs from '../../assets/dinosaur-eggs.png';
 import Fossil from '../../assets/fossil.png';
+import Pickaxe from '../../assets/pickaxe.gif';
 
 const aboutUs = () => {
     return (

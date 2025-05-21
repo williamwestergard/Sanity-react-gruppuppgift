@@ -1,12 +1,6 @@
 import { useState, useEffect } from "react";
 import { client } from "../../sanityClient";
 import "./blog.css";
-import imageUrlBuilder from "@sanity/image-url";
-
-const builder = imageUrlBuilder(client);
-function urlFor(source) {
-  return builder.image(source);
-}
 
 function BlogPostCard() {
   const [post, setPost] = useState(null);
@@ -14,11 +8,11 @@ function BlogPostCard() {
   useEffect(() => {
     client
       .fetch(
-        `*[_type == "post" && title == "How Factually Correct is Jurassic Park?"][0]{
+        `*[_type == "post" && title == "Dino-test"][0]{
           title,
           body,
           "authorName": author->name,
-          "authorImage": author->image,
+
           "categories": categories[]->title
         }`
       )

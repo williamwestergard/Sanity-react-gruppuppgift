@@ -11,20 +11,20 @@ function urlFor(source) {
 function BlogPost() {
   const [post, setPost] = useState(null);
 
-  useEffect(() => {
-    client
-      .fetch(
-        `*[_type == "post" && title == "How Factually Correct is Jurassic Park?"][0]{
-          title,
-          body,
-          "authorName": author->name,
-          "authorImage": author->image,
-          "categories": categories[]->title
-        }`
-      )
-      .then((data) => setPost(data))
-      .catch(console.error);
-  }, []);
+  client
+    .fetch(
+      `*[_type == "post" && title == "test 3"][0]{
+        title,
+        body,
+        "authorName": author->name,
+        "authorImage": author->image,
+        "categories": categories[]->title
+      }`
+    )
+    .then((data) => {
+      console.log(data);
+      setPost(data);
+    });
 
   if (!post) return <h3>Laddar...</h3>;
 

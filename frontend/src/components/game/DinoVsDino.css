@@ -15,13 +15,13 @@
   margin-bottom: 2rem;
 }
 
-.dino-card {
+.dino-vs-card {
   flex: 1;
   background: #fff;
   border-radius: 1.2rem;
   box-shadow: 0 2px 12px #0001;
   padding: 2.5rem 1rem 2rem 1rem; /* more padding for height */
-  min-height: 320px;              /* set a minimum height */
+  min-height: 320px; /* set a minimum height */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,7 +31,7 @@
   position: relative;
 }
 
-.dino-card:hover:not(.voted) {
+.dino-vs-card:hover:not(.voted) {
   transform: scale(1.04);
   box-shadow: 0 4px 24px #0002;
 }

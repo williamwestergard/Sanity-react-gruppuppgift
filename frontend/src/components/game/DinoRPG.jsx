@@ -3,8 +3,16 @@ import dinos from "../../assets/db-with-img.json";
 import "./DinoRPG.css";
 
 const DINO_TYPES = [
-  { key: "carnivore", label: "Meat Eater", desc: "Strong and fierce, loves meat!" },
-  { key: "herbivore", label: "Vegetarian", desc: "Peaceful and tough, loves plants!" },
+  {
+    key: "carnivore",
+    label: "Meat Eater",
+    desc: "Strong and fierce, loves meat!",
+  },
+  {
+    key: "herbivore",
+    label: "Vegetarian",
+    desc: "Peaceful and tough, loves plants!",
+  },
   { key: "omnivore", label: "Mixed", desc: "Adaptable and clever, eats both!" },
 ];
 
@@ -106,9 +114,9 @@ export default function DinoRPG() {
       const dmgToOpponent = Math.floor(Math.random() * 3) + 1;
       const dmgToPlayer = Math.floor(Math.random() * 3) + 1;
 
-      setOpponentHp(hp => Math.max(0, hp - dmgToOpponent));
-      setPlayerHp(hp => Math.max(0, hp - dmgToPlayer));
-      setBattleLog(log => [
+      setOpponentHp((hp) => Math.max(0, hp - dmgToOpponent));
+      setPlayerHp((hp) => Math.max(0, hp - dmgToPlayer));
+      setBattleLog((log) => [
         ...log,
         `You dealt ${dmgToOpponent} dmg, took ${dmgToPlayer} dmg.`,
       ]);
@@ -144,9 +152,10 @@ export default function DinoRPG() {
           <label>
             Name your dino:
             <input
+              className="dino-rpg-input"
               type="text"
               value={dinoName}
-              onChange={e => setDinoName(e.target.value)}
+              onChange={(e) => setDinoName(e.target.value)}
               maxLength={20}
               required
               style={{ marginLeft: "1rem", fontSize: "1.2rem" }}
@@ -158,10 +167,19 @@ export default function DinoRPG() {
         </form>
       ) : !dinoType ? (
         <div>
-          <h3>Welcome, <span style={{ color: "#43a047" }}>{dinoName}</span>!</h3>
+          <h3>
+            Welcome, <span style={{ color: "#43a047" }}>{dinoName}</span>!
+          </h3>
           <p>Choose your dino type:</p>
-          <div style={{ display: "flex", gap: "1.5rem", justifyContent: "center", marginTop: "2rem" }}>
-            {DINO_TYPES.map(type => (
+          <div
+            style={{
+              display: "flex",
+              gap: "1.5rem",
+              justifyContent: "center",
+              marginTop: "2rem",
+            }}
+          >
+            {DINO_TYPES.map((type) => (
               <button
                 key={type.key}
                 className="dino-type-btn"
@@ -179,11 +197,23 @@ export default function DinoRPG() {
                   minWidth: "120px",
                   transition: "background 0.2s, transform 0.1s",
                 }}
-                onMouseOver={e => (e.currentTarget.style.background = "#d2e7b2")}
-                onMouseOut={e => (e.currentTarget.style.background = "#eaf7d0")}
+                onMouseOver={(e) =>
+                  (e.currentTarget.style.background = "#d2e7b2")
+                }
+                onMouseOut={(e) =>
+                  (e.currentTarget.style.background = "#eaf7d0")
+                }
               >
                 {type.label}
-                <div style={{ fontWeight: "normal", fontSize: "0.95rem", marginTop: "0.5rem" }}>{type.desc}</div>
+                <div
+                  style={{
+                    fontWeight: "normal",
+                    fontSize: "0.95rem",
+                    marginTop: "0.5rem",
+                  }}
+                >
+                  {type.desc}
+                </div>
               </button>
             ))}
           </div>
@@ -191,13 +221,33 @@ export default function DinoRPG() {
       ) : !playerDino ? null : (
         <div>
           <h3>
-            {dinoName} the <span style={{ color: "#43a047" }}>{DINO_TYPES.find(t => t.key === dinoType).label}</span>!
+            {dinoName} the{" "}
+            <span style={{ color: "#43a047" }}>
+              {DINO_TYPES.find((t) => t.key === dinoType).label}
+            </span>
+            !
           </h3>
-          <div style={{ margin: "2rem 0", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <div
+            style={{
+              margin: "2rem 0",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
             {/* Player Dino */}
-            <div style={{ width: "48%", textAlign: "center", position: "relative" }}>
+            <div
+              style={{
+                width: "48%",
+                textAlign: "center",
+                position: "relative",
+              }}
+            >
               <img
-                src={playerDino?.image || "https://via.placeholder.com/200x150?text=No+Image"}
+                src={
+                  playerDino?.image ||
+                  "https://via.placeholder.com/200x150?text=No+Image"
+                }
                 alt={playerDino?.name}
                 style={{
                   width: "120px",
@@ -206,22 +256,35 @@ export default function DinoRPG() {
                   border: "3px solid #234d20",
                   borderRadius: "1rem",
                   background: "#eaf7d0",
-                  marginBottom: "0.5rem"
+                  marginBottom: "0.5rem",
                 }}
               />
-              <div style={{ fontSize: "1.1rem", fontWeight: "bold" }}>{playerDino?.name}</div>
+              <div style={{ fontSize: "1.1rem", fontWeight: "bold" }}>
+                {playerDino?.name}
+              </div>
               <div style={{ margin: "0.5rem 0" }}>
                 <HPBar hp={playerHp} max={MAX_HP} />
                 {playerDmg !== null && <FloatingDmg value={playerDmg} />}
               </div>
-              <div style={{ fontSize: "0.95rem" }}>Level: {level} | XP: {xp}/10</div>
+              <div style={{ fontSize: "0.95rem" }}>
+                Level: {level} | XP: {xp}/10
+              </div>
             </div>
             {/* Opponent Dino */}
-            <div style={{ width: "48%", textAlign: "center", position: "relative" }}>
+            <div
+              style={{
+                width: "48%",
+                textAlign: "center",
+                position: "relative",
+              }}
+            >
               {opponent && (
                 <>
                   <img
-                    src={opponent?.image || "https://via.placeholder.com/120x90?text=No+Image"}
+                    src={
+                      opponent?.image ||
+                      "https://via.placeholder.com/120x90?text=No+Image"
+                    }
                     alt={opponent?.name}
                     style={{
                       width: "120px",
@@ -230,13 +293,15 @@ export default function DinoRPG() {
                       border: "2px solid #234d20",
                       borderRadius: "0.7rem",
                       background: "#eaf7d0",
-                      marginBottom: "0.5rem"
+                      marginBottom: "0.5rem",
                     }}
                   />
                   <div style={{ fontSize: "1.1rem" }}>{opponent?.name}</div>
                   <div style={{ margin: "0.5rem 0" }}>
                     <HPBar hp={opponentHp} max={MAX_HP} />
-                    {opponentDmg !== null && <FloatingDmg value={opponentDmg} />}
+                    {opponentDmg !== null && (
+                      <FloatingDmg value={opponentDmg} />
+                    )}
                   </div>
                 </>
               )}
@@ -244,17 +309,19 @@ export default function DinoRPG() {
           </div>
           {/* Battle log */}
           {battleLog.length > 0 && (
-            <div style={{
-              background: "#eaf7d0",
-              border: "2px solid #234d20",
-              borderRadius: "0.7rem",
-              margin: "1rem auto",
-              maxWidth: 340,
-              fontFamily: "monospace",
-              fontSize: "1rem",
-              padding: "0.5rem 1rem",
-              minHeight: "2.2rem"
-            }}>
+            <div
+              style={{
+                background: "#eaf7d0",
+                border: "2px solid #234d20",
+                borderRadius: "0.7rem",
+                margin: "1rem auto",
+                maxWidth: 340,
+                fontFamily: "monospace",
+                fontSize: "1rem",
+                padding: "0.5rem 1rem",
+                minHeight: "2.2rem",
+              }}
+            >
               {battleLog.slice(-2).map((log, i) => (
                 <div key={i}>{log}</div>
               ))}
@@ -264,17 +331,25 @@ export default function DinoRPG() {
           {battleResult ? (
             <div>
               <h4>
-                {battleResult === "win" ? "You won!" : battleResult === "lose" ? "You lost!" : "It's a draw!"}
+                {battleResult === "win"
+                  ? "You won!"
+                  : battleResult === "lose"
+                  ? "You lost!"
+                  : "It's a draw!"}
               </h4>
               <button onClick={handleNextBattle}>Continue</button>
-              <button onClick={startBattle} style={{ marginLeft: "1rem" }}>Battle Again</button>
+              <button onClick={startBattle} style={{ marginLeft: "1rem" }}>
+                Battle Again
+              </button>
             </div>
           ) : !isBattling ? (
             <button onClick={startBattle} style={{ marginTop: "1.5rem" }}>
               Battle!
             </button>
           ) : (
-            <div style={{ marginTop: "1.5rem", color: "#234d20" }}>Battling...</div>
+            <div style={{ marginTop: "1.5rem", color: "#234d20" }}>
+              Battling...
+            </div>
           )}
         </div>
       )}
@@ -285,32 +360,43 @@ export default function DinoRPG() {
 // HP bar component
 function HPBar({ hp, max }) {
   return (
-    <div style={{
-      background: "#b6d99a",
-      border: "2px solid #234d20",
-      borderRadius: "0.5rem",
-      width: 90,
-      height: 18,
-      margin: "0 auto",
-      position: "relative",
-      overflow: "hidden"
-    }}>
-      <div style={{
-        background: "#43a047",
-        width: `${Math.max(0, (hp / max) * 100)}%`,
-        height: "100%",
-        transition: "width 0.3s"
-      }} />
-      <span style={{
-        position: "absolute",
-        left: 0, right: 0, top: 0, bottom: 0,
-        textAlign: "center",
-        fontSize: "1rem",
-        color: "#234d20",
-        fontWeight: "bold",
-        lineHeight: "18px",
-        textShadow: "0 1px #fff8"
-      }}>{hp} / {max}</span>
+    <div
+      style={{
+        background: "#b6d99a",
+        border: "2px solid #234d20",
+        borderRadius: "0.5rem",
+        width: 90,
+        height: 18,
+        margin: "0 auto",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      <div
+        style={{
+          background: "#43a047",
+          width: `${Math.max(0, (hp / max) * 100)}%`,
+          height: "100%",
+          transition: "width 0.3s",
+        }}
+      />
+      <span
+        style={{
+          position: "absolute",
+          left: 0,
+          right: 0,
+          top: 0,
+          bottom: 0,
+          textAlign: "center",
+          fontSize: "1rem",
+          color: "#234d20",
+          fontWeight: "bold",
+          lineHeight: "18px",
+          textShadow: "0 1px #fff8",
+        }}
+      >
+        {hp} / {max}
+      </span>
     </div>
   );
 }
@@ -318,18 +404,20 @@ function HPBar({ hp, max }) {
 // Floating damage text
 function FloatingDmg({ value }) {
   return (
-    <span style={{
-      position: "absolute",
-      left: "50%",
-      top: "-18px",
-      transform: "translateX(-50%)",
-      color: value < 0 ? "#e53935" : "#43a047",
-      fontWeight: "bold",
-      fontSize: "1.2rem",
-      animation: "floatDmg 0.7s linear",
-      pointerEvents: "none",
-      zIndex: 2
-    }}>
+    <span
+      style={{
+        position: "absolute",
+        left: "50%",
+        top: "-18px",
+        transform: "translateX(-50%)",
+        color: value < 0 ? "#e53935" : "#43a047",
+        fontWeight: "bold",
+        fontSize: "1.2rem",
+        animation: "floatDmg 0.7s linear",
+        pointerEvents: "none",
+        zIndex: 2,
+      }}
+    >
       {value}
       <style>
         {`

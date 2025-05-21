@@ -25,7 +25,7 @@ form label {
   letter-spacing: 1px;
 }
 
-input[type="text"] {
+.dino-rpg-input input[type="text"] {
   background: #eaf7d0;
   border: 2px solid #3a5c2c;
   border-radius: 0.4rem;
@@ -38,12 +38,12 @@ input[type="text"] {
   box-shadow: 0 2px #7fa86b inset;
 }
 
-input[type="text"]:focus {
+.dino-rpg-input input[type="text"]:focus {
   border-color: #234d20;
   background: #d2e7b2;
 }
 
-button[type="submit"] {
+.dino-rpg-container button[type="submit"] {
   background: #3a5c2c;
   color: #eaf7d0;
   border: 2px solid #234d20;
@@ -58,7 +58,7 @@ button[type="submit"] {
   transition: background 0.2s, color 0.2s;
 }
 
-button[type="submit"]:hover {
+.dino-rpg-container button[type="submit"]:hover {
   background: #234d20;
   color: #b6d99a;
 }

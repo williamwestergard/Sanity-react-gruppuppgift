@@ -52,12 +52,8 @@ export default function DinoVsDino() {
           <div
             key={i}
             className={
-              "dino-card" +
-              (voted
-                ? selected === i
-                  ? " chosen"
-                  : " voted"
-                : "")
+              "dino-vs-card" +
+              (voted ? (selected === i ? " chosen" : " voted") : "")
             }
             onClick={() => handleVote(i)}
             style={{ cursor: voted ? "default" : "pointer" }}

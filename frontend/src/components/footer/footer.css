@@ -1,18 +1,227 @@
 #footer-content {
   width: 100%;
-  height: 30vh;
-
-  position: absolute;
+  height: 65vh;
   background-color: #202020;
-  color: white;
+  display: flex;
+  justify-content: center;
+}
+#footer-content h3 {
+  margin-bottom: 0.8vh;
+  letter-spacing: 0.7px;
+  font-size: clamp(0.9rem, 1vw, 1rem);
+}
+
+.footer-wrapper {
+  width: 50%;
+  height: 60vh;
+  position: absolute;
+  color: rgb(221, 221, 221);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  text-align: left;
+  text-transform: uppercase;
+  margin: auto;
+  font-size: clamp(0.7rem, 1vw, 0.8rem);
+  line-height: 2vh;
+}
+
+.footer-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  align-items: center;
+  align-self: baseline;
+  position: relative;
+  top: 11vh;
+  font-size: clamp(0.6rem, 1vw, 0.7rem);
+  line-height: 3vh;
+  letter-spacing: 0.7px;
 }
 
 .dino-logo-animated {
   width: 150px;
   height: auto;
   mix-blend-mode: screen;
+}
+
+.footer-section-1,
+.footer-section-2,
+.footer-section-3 {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 1vh;
+}
+.footer-section-1 a,
+.footer-section-2 a,
+.footer-section-3 a {
+  color: rgb(177, 176, 176);
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  width: auto;
+}
+.footer-section-1 a:hover,
+.footer-section-2 a:hover,
+.footer-section-3 a:hover {
+  color: rgb(225, 225, 225);
+}
+
+.footer-underline {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+
+  bottom: 22vh;
+}
+
+.footer-made-in-react {
+  position: absolute;
+  bottom: 1vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 2px;
+  font-size: clamp(0.6rem, 1vw, 0.7rem);
+  margin: auto;
+  text-align: center;
+  color: rgb(226, 226, 226);
+}
+
+.footer-made-in-react-logos-container {
+  display: flex;
+
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: relative;
+  left: -0.6vw;
+  top: 0.8vh;
+}
+
+.footer-react-logo {
+  margin-left: 1vw;
+  width: 6%;
+  height: auto;
+}
+
+.footer-sanity-logo {
+  margin-left: 1vw;
+  width: 11%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  #footer-content {
+    width: 100%;
+    height: 88vh;
+    background-color: #202020;
+    display: flex;
+    justify-content: center;
+  }
+  .footer-wrapper {
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    font-size: clamp(0.7rem, 1vw, 0.8rem);
+    line-height: 1.5vh;
+  }
+  #footer-content h3 {
+    margin-bottom: 1vh;
+    letter-spacing: 0.7px;
+    font-size: clamp(0.9rem, 1vw, 1rem);
+    margin-top: 3vh;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    position: relative;
+    top: 15vh;
+    margin-bottom: 15vh;
+    font-size: clamp(0.6rem, 1vw, 0.7rem);
+    line-height: 3vh;
+    letter-spacing: 0.7px;
+  }
+  .footer-container p {
+    display: none;
+  }
+
+  .dino-logo-animated {
+    width: 100px;
+    height: auto;
+    margin: auto;
+    mix-blend-mode: screen;
+  }
+
+  .footer-section-1,
+  .footer-section-2,
+  .footer-section-3 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1vh;
+  }
+  .footer-section-1 a,
+  .footer-section-2 a,
+  .footer-section-3 a {
+    letter-spacing: 1.5px;
+  }
+
+  .footer-underline {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+
+    bottom: -20vh;
+  }
+
+  .footer-made-in-react {
+    width: 100%;
+    position: absolute;
+    bottom: -28vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 2px;
+    font-size: clamp(0.6rem, 1vw, 0.7rem);
+    margin: auto;
+    text-align: center;
+    color: rgb(226, 226, 226);
+  }
+
+  .footer-made-in-react-logos-container {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+    left: -0.6vw;
+    top: 2vh;
+  }
+
+  .footer-react-logo {
+    margin-left: 1vw;
+    width: 7%;
+    height: auto;
+  }
+
+  .footer-sanity-logo {
+    margin-left: 3vw;
+    width: 12%;
+    height: auto;
+  }
 }

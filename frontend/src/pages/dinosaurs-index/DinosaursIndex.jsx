@@ -10,26 +10,25 @@ import DinoTimePeriodsImage from "../../assets/dino-timeline-image.png";
 
 const DinosaursIndex = () => {
   const [selectedRange, setSelectedRange] = useState([160, 65]);
+
   return (
     <>
       <ScrollToTop />
       <Navbar />
       <section className="page-wrapper">
-        <main id="main-content">
-          <section id="dino-index-content">
-            <section className="index-left-side-content">
-              <h1>Dinosaurs Index</h1>
+        <section id="dino-index-content">
+          <section className="index-left-side-content">
+            <h1 className="dino-index-title">Dinosaurs Index</h1>
 
-              <TimeLineFilter selectedRange={selectedRange} />
-            </section>
-            <section className="index-right-side-content">
-              <TimeLineSlider
-                selectedRange={selectedRange}
-                setSelectedRange={setSelectedRange}
-              />
-            </section>
+            <TimeLineFilter selectedRange={selectedRange} />
           </section>
-        </main>
+          <section className="index-right-side-content">
+            <TimeLineSlider
+              selectedRange={selectedRange}
+              setSelectedRange={setSelectedRange}
+            />
+          </section>
+        </section>
 
         <img
           className="dino-time-periods-image"

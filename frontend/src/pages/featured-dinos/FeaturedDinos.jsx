@@ -4,12 +4,15 @@ import Footer from "../../components/footer/Footer.jsx";
 import FeaturedDinoImage from "./img/t-rex.png";
 import FeaturedDinoImageBg from "./img/featured-dino-bg.png";
 import ScrollToTop from "../../components/scroll-to-top/ScrollToTop";
+import FeaturedDinosList from "./featured-dinos.json";
 
 const FeaturedDinos = () => {
+  const featureDino = FeaturedDinosList.find((dino) => dino.name);
   return (
     <>
       <ScrollToTop />
       <Navbar />
+
       <section className="page-wrapper">
         <main id="main-content">
           <main id="featured-dinos-content">
@@ -25,7 +28,11 @@ const FeaturedDinos = () => {
             <article className="feature-dino-discovery-container">
               <p className="featured-dino-discovery-text">
                 First discovered
-                <span className="featured-dino-discovery-year"> 1874</span>
+                <article className="feature-dino-year-container">
+                  <article className="featured-dino-discovery-year">
+                    {featureDino.discovery}
+                  </article>
+                </article>
               </p>
             </article>
 
@@ -42,23 +49,30 @@ const FeaturedDinos = () => {
 
             <section className="featured-dino-name-and-type">
               <h1 className="featured-dino-name">
-                Tyrannosaurus
-                <span className="featured-dino-name-big-bold">Rex</span>
+                {featureDino.name}
+                <span className="featured-dino-name-big-bold">
+                  {" "}
+                  {featureDino.name2nd}
+                </span>
               </h1>
               <p className="featured-dino-type">
-                <span className="feature-dino-type-border">Type</span> Theropod
+                <span className="feature-dino-type-border">Type</span>{" "}
+                {featureDino.type}
               </p>
             </section>
 
             <article className="feature-dino-information">
-              <h2 className="feature-dino-information-header">The Classic</h2>
-              <p className="eature-dino-information-text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. In
-                voluptas sequi et quaerat repellendus corrupti saepe inventore
-                necessitatibus.
-                <br /> <br />
-                Mollitia esse ducimus cum quae unde suscipit, aperiam
-                exercitationem est voluptatibus omnis.
+              <h2 className="feature-dino-information-header">
+                {" "}
+                {featureDino.header}
+              </h2>
+              <p className="feature-dino-information-text">
+                {featureDino.desc.split("\n").map((line, index) => (
+                  <span key={index}>
+                    {line}
+                    <br />
+                  </span>
+                ))}
               </p>
             </article>
             <span className="featured-dino-bottom-line"></span>

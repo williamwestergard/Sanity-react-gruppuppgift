@@ -1,12 +1,38 @@
 [
   {
+    "link": "Tyrannosaurus Rex",
     "name": "Tyrannosaurus",
-    "name2nd": "Rex",
+    "name2nd": "Rex*",
     "pronunciation": "tie-RAN-oh-sore-us",
     "type": "Theropod",
     "diet": "carnivorous",
     "discovery": 1874,
     "header": "The Classic",
+    "image": "../src/pages/featured-dinos/img/t-rex.png",
     "desc": "Argubly the most famous dinosaur, the Tyrannosaurus rex was one of the largest meat-eating dinosaurs with a massive head, but very small arms. \n \n  It could grow up to 40 feet long and weigh around 9 tons. It lived in what is now North America."
+  },
+    {
+      "link": "Stegosaurus",
+    "name": "Stegosaurus",
+    "name2nd": "*",
+    "pronunciation": "steh-guh-saw-ruhs",
+    "type": "ornithischian",
+    "diet": "herbivorous",
+    "discovery": 1877,
+    "header": "Punk Rocker",
+    "image": "../src/pages/featured-dinos/img/stegosaurus.png",
+    "desc": "The Stegosaurus was a herbivorous dinosaur that lived during the Late Jurassic period, around 150 million years ago. \n \n  It is known for its distinctive double row of large, bony plates along its back and a spiked tail, likely used for defense. Despite its massive body, it had a relatively small brain, about the size of a walnut."
+  },
+      {
+         "link": "Brontosaurus",
+    "name": "Brontosaurus",
+    "name2nd": "*",
+    "pronunciation": "bron-tuh-saw-ruhs",
+    "type": "sauropod",
+    "diet": "herbivorous",
+    "discovery": 1874,
+    "header": "The skyscraper",
+    "image": "../src/pages/featured-dinos/img/brontosaurus.png",
+    "desc": "The Brontosaurus was a massive, long-necked herbivorous dinosaur that lived during the Late Jurassic period, around 150 million years ago. \n \n It belonged to the sauropod group and could grow up to 22 meters (72 feet) in length."
   }
    ]

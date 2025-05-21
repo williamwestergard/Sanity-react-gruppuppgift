@@ -30,6 +30,8 @@ const Blog = () => {
             {/* <BlogPostCard /> */}
 
             <BlogPost />
+            <br />
+            <br />
           </section>
         </main>
       </section>

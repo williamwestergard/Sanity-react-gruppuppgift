@@ -42,8 +42,12 @@
   left: 56%;
   transform: translate(-50%, -50%);
   width: 53%;
-  animation: featureddinoanimation 0.9s forwards;
   opacity: 0%;
+}
+
+.feature-dino-image-animate {
+  opacity: 0%;
+  animation: featureddinoanimation 0.9s forwards;
   animation-timing-function: ease-out;
 }
 

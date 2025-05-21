@@ -30,7 +30,7 @@ const Footer = () => {
           </section>
           <section className="footer-section-3">
             <h3>The team</h3>
-            <NavLink to="/did-you-know">About Us</NavLink>
+            <NavLink to="/about-us">About Us</NavLink>
             <NavLink to="/blog">Blog</NavLink>
           </section>
           <article className="footer-underline"></article>

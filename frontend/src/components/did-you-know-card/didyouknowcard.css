@@ -25,6 +25,23 @@
   padding: 0.5vw 2vh; 
 }
 
-.did-you-know-card-read-more a:hover {
+.did-you-know-card-button {
   cursor: pointer;
+  font-family: 'Pirata One', cursive;
+  background-color: #d4c4a8;
+  border: 3px solid #8b7b6b;
+  color: #3e342f;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  border-radius: 12px;
+  box-shadow: inset 2px 2px 6px #a3917a, inset -2px -2px 6px #f4e9d4;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
+
+.did-you-know-card-button:hover {
+  background: linear-gradient(145deg, #5ba819, #7ad129);
+  box-shadow: 0 0 15px rgba(80, 120, 20, 0.6);
+  transform: scale(1.05);
+}
+

@@ -35,9 +35,10 @@ export default function App() {
               <br></br>
               <p>
                 Want to know which dinosaur is the best?
-                <br />
-                Check out our Dino VS Dino section!
+                <br></br>
+                Check out our Dino VS Dino game.
               </p>
+              <br></br>
               <Link to="/dino-vs-dino">
                 <button>Battle</button>
               </Link>

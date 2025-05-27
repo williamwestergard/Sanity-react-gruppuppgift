@@ -4,7 +4,6 @@ import { client } from "../../sanityClient";
 import { PortableText } from "@portabletext/react";
 import "./blog.css";
 import imageUrlBuilder from "@sanity/image-url";
-import { PortableText } from "@portabletext/react";
 import Comments from "../../components/comments/comments.jsx";
 
 const builder = imageUrlBuilder(client);
@@ -67,10 +66,11 @@ function BlogPost() {
       {posts.map((post) => (
         <article key={post._id} className="blog-post">
           <h1 className="blog-post-title">{post.title}</h1>
-          
+
           <section className="blog-post-author">
             <p>
-              <span style={{ fontWeight: "700" }}> Author: </span> {post.authorName}
+              <span style={{ fontWeight: "700" }}> Author: </span>{" "}
+              {post.authorName}
             </p>
             {post.authorImage && (
               <img

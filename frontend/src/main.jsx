@@ -13,7 +13,8 @@ import DinosaursIndex from "./pages/dinosaurs-index/DinosaursIndex.jsx";
 import FeaturedDinos from "./pages/featured-dinos/FeaturedDinos.jsx";
 import DinoIndexFacts from "./pages/dinosaurs-index/dinosaurs-index-facts/DinoIndexFacts.jsx";
 import GuessThatDinoPage from "./pages/guess-that-dino/GuessThatDinoPage.jsx";
-import Blog from "./pages/blog/Blog.jsx";
+import BlogCardsPage from "./pages/blog/BlogCardsPage.jsx";
+import BlogContent from "./pages/blog/Blog.jsx";
 import DinoVsDinoPage from "./pages/dino-vs-dino/DinoVsDinoPage.jsx";
 import DinoRPGPage from "./pages/dino-rpg/DinoRPGPage.jsx";
 
@@ -29,7 +30,8 @@ const router = createBrowserRouter([
   { path: "/dino-vs-dino", element: <DinoVsDinoPage /> },
   { path: "/dino-rpg", element: <DinoRPGPage /> },
   { path: "/guess-that-dino", element: <GuessThatDinoPage /> },
-  { path: "/blog", element: <Blog /> },
+  { path: "/blog", element: <BlogCardsPage /> },
+  { path: "/blog/:slug", element: <BlogContent /> },
 
   { path: "/search", element: <Search /> },
 

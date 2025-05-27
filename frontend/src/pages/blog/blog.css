@@ -49,8 +49,15 @@
 .blog-post-text {
   width: 100%;
   margin: auto;
-  margin-top: 10vh;
+  margin-top: 12vh;
+  line-height: 26px;
+}
+
+.blog-post-text h3 {
+  margin-top: 6vh;
+  margin-bottom: 2.5vh;
   text-align: left;
+  font-size: clamp(1.3rem, 1.4vw, 1.6rem);
 }
 
 .blog-post-comments {

@@ -10,9 +10,19 @@ export default {
       type: 'string',
     },
     {
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'title',
+        maxLength: 96,
+      },
+    },
+    {
       name: 'body',
       title: 'Body',
-      type: 'text',
+      type: 'array',
+      of: [{type: 'block'}],
     },
     {
       name: 'author',
@@ -20,7 +30,6 @@ export default {
       type: 'reference',
       to: [{type: 'author'}],
     },
-
     {
       name: 'categories',
       type: 'array',

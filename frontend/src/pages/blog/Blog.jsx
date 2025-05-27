@@ -3,10 +3,12 @@ import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer.jsx";
 import ScrollToTop from "../../components/scroll-to-top/ScrollToTop";
 import BlogPost from "./BlogPost.jsx";
-import BlogPostCard from "./BlogPostCard.jsx";
-import Comments from "../../components/comments/comments.jsx";
+import CreateBlogPost from "./CreateBlogPost";
+import { useState } from "react";
 
 const Blog = () => {
+  const [showCreatePost, setShowCreatePost] = useState(false);
+
   return (
     <>
       <ScrollToTop />
@@ -22,20 +24,19 @@ const Blog = () => {
                   fontSize: "2rem",
                 }}
               >
-                Dino <span style={{ fontWeight: "500" }}> Blog </span>{" "}
+                Dino <span style={{ fontWeight: "500" }}> Blog </span>
               </h1>
-
-              <p> Dino content</p>
+              <button
+                className="create-post-toggle"
+                onClick={() => setShowCreatePost(!showCreatePost)}
+              >
+                {showCreatePost ? "Hide Post Form" : "Create New Post"}
+              </button>
             </section>
 
-            {/* <BlogPostCard /> */}
+            {showCreatePost && <CreateBlogPost />}
 
             <BlogPost />
-            <section className="blog-post-comments">
-              <h3>Leave a comment!</h3>
-              <br />
-              <Comments />
-            </section>
           </section>
         </main>
       </section>

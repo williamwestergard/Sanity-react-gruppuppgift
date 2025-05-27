@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
+/* Main container */
 .dino-rpg-container {
   max-width: 800px;
   margin: 5rem auto 2rem;
@@ -10,12 +11,31 @@
   color: #eaf7d0;
 }
 
+/* Header styles */
 .pokemon-heading {
   text-align: center;
   color: #eaf7d0;
   font-size: 2.5rem;
   margin-bottom: 2rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Registration section */
+.registration-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Game sections */
+.game-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.dino-type-selection {
+  text-align: center;
 }
 
 .battle-arena {
@@ -27,6 +47,59 @@
   background: rgba(0, 0, 0, 0.2);
   border-radius: 15px;
   position: relative;
+}
+
+/* Player and opponent articles */
+.player-dino,
+.opponent-dino {
+  background: rgba(234, 247, 208, 0.1);
+  padding: 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  width: 45%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.player-dino:hover,
+.opponent-dino:hover {
+  transform: translateY(-5px);
+}
+
+/* Battle log */
+.battle-log {
+  background: rgba(234, 247, 208, 0.1);
+  border: 2px solid #43a047;
+  border-radius: 10px;
+  margin: 1rem auto;
+  max-width: 400px;
+  padding: 1rem;
+  font-family: "VT323", monospace;
+  font-size: 1.1rem;
+  max-height: 150px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #43a047 transparent;
+  line-height: 1.4;
+  color: #eaf7d0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.battle-log p {
+  margin: 0.5rem 0;
+}
+
+/* Dialog styles */
+dialog.shop-modal,
+dialog.loading-overlay {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+dialog.shop-modal::backdrop,
+dialog.loading-overlay::backdrop {
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .dino-card {

@@ -57,3 +57,212 @@
   margin-top: 10vh;
   margin-bottom: 10vh;
 }
+
+.create-blog-post {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.create-blog-post h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #666;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: rgb(65, 71, 123);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+  background-color: rgb(55, 60, 105);
+}
+
+.submit-button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.submit-status {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.submit-status.success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.submit-status.error {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.blog-posts-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.blog-post {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+  padding: 2rem;
+}
+
+.blog-post-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: left;
+}
+
+.blog-post-meta {
+  margin: 1rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.blog-post-date {
+  margin: 0;
+}
+
+.comments-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.comments-list {
+  margin-top: 2rem;
+}
+
+.comment {
+  background: #f8f9fa;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.comment-date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.comment-text {
+  margin: 0;
+  white-space: pre-line;
+}
+
+.create-post-toggle {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: rgb(65, 71, 123);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.create-post-toggle:hover {
+  background-color: rgb(55, 60, 105);
+}
+
+/* Blog post content styles */
+.blog-post-heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+  color: #333;
+}
+
+.blog-post-subheading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 1.5rem 0 1rem;
+  color: #444;
+}
+
+.blog-post-text {
+  margin: 1rem 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+.blog-post-text a {
+  color: rgb(65, 71, 123);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.blog-post-text a:hover {
+  border-bottom-color: rgb(65, 71, 123);
+}
+
+.blog-post-text strong {
+  font-weight: 600;
+}
+
+.blog-post-text em {
+  font-style: italic;
+}
+
+.form-help-text {
+  display: block;
+  margin-top: 0.5rem;
+  color: #666;
+  font-size: 0.9rem;
+  font-style: italic;
+}

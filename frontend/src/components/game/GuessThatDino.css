@@ -42,18 +42,18 @@
   transition: filter 0.3s;
   z-index: 1;
   position: absolute;
-  left: -0px; /* Move image to the left */
-  top: 10px; /* Center vertically, adjust as needed */
+  left: -0px;
+  top: 10px; 
   height: 65%;
   width: 65%;
 }
 
-/* Red diagonal line to cross out Pokémon text */
+
 .crossout {
   position: absolute;
   top: 80%;
-  right: 18px; /* Adjust to match the "Pokémon" text position */
-  bottom: 22px; /* Adjust as needed */
+  right: 18px; 
+  bottom: 22px; 
   width: 150px;
   height: 0;
   border-bottom: 10px solid #000000;
@@ -137,7 +137,6 @@
   letter-spacing: 1px;
 }
 
-/* Animations */
 @keyframes pop {
   0% {
     transform: scale(1);

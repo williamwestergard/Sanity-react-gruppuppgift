@@ -44,7 +44,7 @@ const MEME_ITEMS = [
   { name: "Matrix Attack", type: "effect_matrix", chance: 0.05, fossilCost: 500 }
 ];
 
-// Add shop items after MEME_ITEMS
+
 const SHOP_ITEMS = [
   { name: "Small Healing Potion", type: "small_heal", cost: 50, heal: 3, description: "Heals 3 HP" },
   { name: "Medium Healing Potion", type: "medium_heal", cost: 100, heal: 5, description: "Heals 5 HP" },
@@ -65,13 +65,12 @@ const HP_PER_LEVEL = 5;
 const BASE_DAMAGE = 1;
 const DAMAGE_PER_LEVEL = 0.5;
 
-// Add starting inventory items
 const STARTING_INVENTORY = [
   { name: "Small Healing Potion", type: "small_heal", heal: 3, quantity: 3 },
   { name: "Medium Healing Potion", type: "medium_heal", heal: 5, quantity: 2 }
 ];
 
-// Add common Flaticon CDN paths for items
+// Mock bilder
 const ITEM_IMAGES = {
   hat: [
     'https://cdn-icons-png.flaticon.com/128/1974/1974210.png', // Top hat
@@ -109,10 +108,10 @@ function getRandomItemImage(type) {
   } else if (type.includes('heal') || type.includes('boost') || type.includes('rejuvenation')) {
     return ITEM_IMAGES.potion[Math.floor(Math.random() * ITEM_IMAGES.potion.length)];
   }
-  return 'https://cdn-icons-png.flaticon.com/128/3097/3097972.png'; // Default item image
+  return 'https://cdn-icons-png.flaticon.com/128/3097/3097972.png'; 
 }
 
-// Add helper function for item details
+
 function getItemDetails(item) {
   const lootItem = LOOT_ITEMS.find(i => i.type === item.type);
   const memeItem = MEME_ITEMS.find(i => i.type === item.type);
@@ -124,11 +123,10 @@ function getItemDetails(item) {
   };
 }
 
-// Update getRandomDino to make level 1 easier
+// Lättare level 1
 function getRandomDino(type, targetLevel) {
   function calculateDinoLevel(dino) {
     if (targetLevel === 1) {
-      // For level 1 players, prefer smaller dinos
       if (dino.length) {
         const lengthInMeters = parseFloat(dino.length);
         if (!isNaN(lengthInMeters)) {
@@ -137,10 +135,10 @@ function getRandomDino(type, targetLevel) {
           return 3;
         }
       }
-      return 1; // Default to level 1 for new players
+      return 1;
     }
 
-    // Normal level calculation for higher levels
+    // Normal level matte
     if (dino.length) {
       const lengthInMeters = parseFloat(dino.length);
       if (!isNaN(lengthInMeters)) {
@@ -154,11 +152,10 @@ function getRandomDino(type, targetLevel) {
     return Math.max(1, targetLevel + Math.floor(Math.random() * 3) - 1);
   }
 
-  // Filter dinos based on player level
+  // Filtrera dinos baserat på level
   const validDinos = dinos.filter(d => {
     const dinoLevel = calculateDinoLevel(d);
     if (targetLevel === 1) {
-      // For level 1, only show level 1 opponents
       return dinoLevel === 1;
     }
     return (!targetLevel || Math.abs(dinoLevel - targetLevel) <= 2);
@@ -178,25 +175,22 @@ function getRandomDino(type, targetLevel) {
 }
 
 function calculateBattleOdds(playerLevel, opponentLevel, playerHp, opponentHp) {
-  // Base 50/50 for same level
   let odds = 0.5;
   
-  // Level difference affects odds
   const levelDiff = playerLevel - opponentLevel;
-  odds += levelDiff * 0.1; // Each level difference is worth 10%
+  odds += levelDiff * 0.1; 
   
-  // HP ratio affects odds
   const playerHpRatio = playerHp / BASE_HP;
   const opponentHpRatio = opponentHp / BASE_HP;
-  odds += (playerHpRatio - opponentHpRatio) * 0.2; // HP difference worth up to 20%
+  odds += (playerHpRatio - opponentHpRatio) * 0.2; 
   
-  return Math.max(0.1, Math.min(0.9, odds)); // Clamp between 10% and 90%
+  return Math.max(0.1, Math.min(0.9, odds));
 }
 
 function rollLoot(playerLevel) {
   const loot = [];
   
-  // Guarantee at least one healing potion based on player level
+  // Garantera att spelaren får en heal item
   const availableHeals = LOOT_ITEMS.filter(
     item => item.type.includes('heal') && 
     item.minLevel <= playerLevel
@@ -228,9 +222,8 @@ function rollLoot(playerLevel) {
   return loot;
 }
 
-// Function to get a working dino image
+// Få fungerande bild
 function getWorkingDinoImage(dino) {
-  // List of reliable dino images (add more as needed)
   const reliableDinos = dinos.filter(d => {
     const img = new Image();
     img.src = d.image;
@@ -245,7 +238,7 @@ function getWorkingDinoImage(dino) {
     }
   }
 
-  // Find a similar dino by type or size
+  // Hitta liknande dinosaurier
   const similarDino = reliableDinos.find(d => 
     d.diet === dino?.diet || 
     (d.length && dino?.length && Math.abs(parseFloat(d.length) - parseFloat(dino.length)) < 2)
@@ -254,7 +247,7 @@ function getWorkingDinoImage(dino) {
   return similarDino ? similarDino.image : "https://via.placeholder.com/200x150?text=Dinosaur";
 }
 
-// Add this helper function for displaying stats
+// Helper för stats
 function StatDisplay({ label, value, color = "#43a047" }) {
   return (
     <div style={{ 
@@ -272,7 +265,7 @@ function StatDisplay({ label, value, color = "#43a047" }) {
   );
 }
 
-// Add image preloading function at the top level
+// Pre-load bilder
 function preloadImage(url) {
   return new Promise((resolve, reject) => {
     const img = new Image();
@@ -282,7 +275,7 @@ function preloadImage(url) {
   });
 }
 
-// Add preloading helper for dinos
+// Preload dino bilder
 async function preloadDinoImages(dino) {
   if (!dino) return null;
   try {
@@ -296,7 +289,7 @@ async function preloadDinoImages(dino) {
 }
 
 export default function DinoRPG() {
-  // Basic game state
+  // Game state
   const [dinoName, setDinoName] = useState("");
   const [registered, setRegistered] = useState(false);
   const [dinoType, setDinoType] = useState(null);
@@ -342,26 +335,25 @@ export default function DinoRPG() {
   const [autoHealsRemaining, setAutoHealsRemaining] = useState(5);
   const [lastHealReset, setLastHealReset] = useState(null);
 
-  // For clearing intervals
   const battleInterval = useRef(null);
 
-  // Add these to your DinoRPG component state
+  // Component states
   const [showShop, setShowShop] = useState(false);
   const [attackSpeed, setAttackSpeed] = useState(1);
   const [critChance, setCritChance] = useState(0);
   const [defense, setDefense] = useState(0);
 
-  // Add new state for animations
+  // State animationer
   const [playerAnimation, setPlayerAnimation] = useState(null);
   const [opponentAnimation, setOpponentAnimation] = useState(null);
   const [hitEffects, setHitEffects] = useState([]);
 
-  // Add password state
+  // Lösenords hantering
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 
-  // Add loading state
+  // Laddning state
   const [imageLoading, setImageLoading] = useState(false);
 
   // Initialize new player inventory
@@ -371,13 +363,13 @@ export default function DinoRPG() {
     }
   }, [registered, showLogin]);
 
-  // Check for HP regeneration and auto-heal reset
+  // HP regeneration, auto-heal reset
   useEffect(() => {
     if (!playerId || !isBattling) return;
 
-    // Check if HP is low and we have healing potions
+    // Kollar om hp är lågt och om det är dags för auto-heal
     if (playerHp <= maxHp * 0.5) {
-      // Try to use the best healing potion available
+      // Använd bäst healing potion
       const healingPotions = inventory.filter(item => item.type.includes('heal'))
         .sort((a, b) => {
           const healA = LOOT_ITEMS.find(i => i.type === a.type)?.heal || 0;
@@ -391,7 +383,7 @@ export default function DinoRPG() {
         const healAmount = potionData.heal;
         const newHp = Math.min(maxHp, playerHp + healAmount);
         
-        // Remove the potion from inventory
+        // Ta bort potion från inventory
         const newInventory = [...inventory];
         const potionIndex = newInventory.findIndex(i => i.type === bestPotion.type);
         if (newInventory[potionIndex].quantity > 1) {
@@ -411,12 +403,12 @@ export default function DinoRPG() {
     }
   }, [playerId, isBattling, playerHp, maxHp, inventory]);
 
-  // Add this function to handle hit effects
+  // Hit effects
   const addHitEffect = (isPlayer) => {
     const id = Date.now();
     const effect = {
       id,
-      x: Math.random() * 80 + 20, // Random position within the target
+      x: Math.random() * 80 + 20, 
       y: Math.random() * 60 + 20
     };
     setHitEffects(prev => [...prev, effect]);
@@ -430,7 +422,6 @@ export default function DinoRPG() {
     if (!isBattling || !opponent) return;
 
     if (playerHp <= 0) {
-      // Player died - delete character if no rejuvenation potion
       const hasRejuvenation = inventory.some(item => item.type === 'rejuvenation');
       if (!hasRejuvenation) {
         setBattleLog(prev => [...prev, "Your dinosaur has fallen! Game Over!"]);
@@ -438,7 +429,6 @@ export default function DinoRPG() {
         setIsBattling(false);
         const newLosses = losses + 1;
         setLosses(newLosses);
-        // Update losses and mark as dead before deletion
         updatePlayerInSanity({ 
           losses: newLosses,
           isDead: true 
@@ -452,7 +442,6 @@ export default function DinoRPG() {
           }, 3000);
         });
       } else {
-        // Use rejuvenation potion automatically
         const newInventory = inventory.filter(item => item.type !== 'rejuvenation');
         setInventory(newInventory);
         setPlayerHp(maxHp);
@@ -466,12 +455,12 @@ export default function DinoRPG() {
     }
 
     if (opponentHp <= 0) {
-      // Opponent died - handle victory
+      // Hantera vinst
       setBattleLog(prev => [...prev, "Victory! Your opponent has been defeated!"]);
       setBattleResult('win');
       setIsBattling(false);
       
-      // Roll for loot and add XP
+      // Roll loot and xp
       const newLoot = rollLoot(level);
       const xpGained = Math.floor(Math.random() * 3) + 3 + Math.floor(opponent.level / 2); // More XP from higher level opponents
       const newXp = xp + xpGained;
@@ -487,10 +476,10 @@ export default function DinoRPG() {
         handleLevelUp(newLevel);
       }
 
-      // Always have loot after victory
+      // Alltid loot efter vinst
       setLootDrops(newLoot);
       
-      // Format loot message
+      // Loot meddelande
       const lootMessages = newLoot.map(item => {
         const itemDetails = getItemDetails(item);
         let msg = `- ${itemDetails.name}`;
@@ -505,7 +494,7 @@ export default function DinoRPG() {
         ...lootMessages
       ]);
       
-      // Update inventory with new items
+      // Updattera inventory
       const updatedInventory = [...inventory];
       newLoot.forEach(item => {
         const existingItem = updatedInventory.find(i => i.type === item.type);
@@ -517,13 +506,13 @@ export default function DinoRPG() {
       });
       setInventory(updatedInventory);
       
-      // Add fossils (more for higher level opponents)
+      // Add fossils 
       const fossilsGained = Math.floor(Math.random() * 20) + (opponent.level * 10);
       const newFossils = fossils + fossilsGained;
       setFossils(newFossils);
       setBattleLog(prev => [...prev, `Found ${fossilsGained} fossils!`]);
 
-      // Update Sanity with all changes
+      // Update Sanity
       updatePlayerInSanity({ 
         inventory: updatedInventory,
         wins: newWins,
@@ -571,7 +560,6 @@ export default function DinoRPG() {
         addHitEffect(true);
       }, 300);
 
-      // Clear animations
       setTimeout(() => {
         setOpponentAnimation(null);
         setPlayerAnimation(null);
@@ -595,7 +583,7 @@ export default function DinoRPG() {
     return () => clearTimeout(battleInterval.current);
   }, [isBattling, playerHp, opponentHp, opponent, battleOdds, attackPower, tempAttackBoost, tempDefenseBoost, defense, critChance, attackSpeed, equippedItems]);
 
-  // Reset temporary boosts after battle
+  // Reset temporary boosts
   useEffect(() => {
     if (!isBattling) {
       setTempAttackBoost(0);
@@ -613,14 +601,14 @@ export default function DinoRPG() {
     setLootDrops([]);
   }
 
-  // Add level up function
+  // level up function
   function handleLevelUp(newLevel) {
     const newMaxHp = BASE_HP + (newLevel - 1) * HP_PER_LEVEL + permanentHpBoost;
     const newAttackPower = BASE_DAMAGE + (newLevel - 1) * DAMAGE_PER_LEVEL + permanentAttackBoost;
     
     setMaxHp(newMaxHp);
     setAttackPower(newAttackPower);
-    setPlayerHp(newMaxHp); // Heal to full on level up
+    setPlayerHp(newMaxHp); 
     
     updatePlayerInSanity({
       level: newLevel,
@@ -634,12 +622,12 @@ export default function DinoRPG() {
     });
   }
 
-  // Also update the handleLogin function to handle errors better
+  // Updattera login handler för bättre felhantering
   async function handleLogin(e) {
     e.preventDefault();
     if (dinoName.trim()) {
       try {
-        resetGameState(); // Reset all state before logging in
+        resetGameState(); 
         
         const query = `*[_type == "dinoRpgPlayer" && dinoName == $dinoName][0] {
           _id,
@@ -682,7 +670,7 @@ export default function DinoRPG() {
           return;
         }
 
-        // Set all player data including equipped items
+        // Set all player data 
         setPlayerId(player._id);
         setDinoName(player.dinoName);
         setDinoType(player.dinoType);
@@ -690,12 +678,12 @@ export default function DinoRPG() {
         setXp(player.xp || 0);
         setEquippedItems(player.equippedItems || { hat: null, vehicle: null, effect: null });
         
-        // Calculate proper HP values with fallbacks
+        // Räkna hp och attack
         const calculatedMaxHp = BASE_HP + ((player.level || 1) - 1) * HP_PER_LEVEL + (player.permanentHpBoost || 0);
         setMaxHp(calculatedMaxHp);
         setPlayerHp(player.currentHp || calculatedMaxHp);
         
-        // Set other stats with fallbacks
+        
         setPermanentAttackBoost(player.permanentAttackBoost || 0);
         setPermanentHpBoost(player.permanentHpBoost || 0);
         setLastHpRegen(player.lastHpRegen || new Date().toISOString());
@@ -706,7 +694,7 @@ export default function DinoRPG() {
         setInventory(player.inventory || STARTING_INVENTORY);
         setFossils(player.fossils || 0);
         
-        // If player has a dinoType, get their dino
+        
         if (player.dinoType) {
           const dino = getRandomDino(player.dinoType, player.level || 1);
           setPlayerDino(dino);
@@ -748,12 +736,12 @@ export default function DinoRPG() {
     setEquippedItems({ hat: null, vehicle: null, effect: null });
   }
 
-  // Update handleSubmit to use resetGameState
+
   async function handleSubmit(e) {
     e.preventDefault();
     if (dinoName.trim()) {
       try {
-        resetGameState(); // Reset all state before creating new character
+        resetGameState(); 
         
         const initialMaxHp = BASE_HP;
         const initialAttack = BASE_DAMAGE;
@@ -822,7 +810,7 @@ export default function DinoRPG() {
     }
   }
 
-  // Update handleTypeSelect to preload images
+
   async function handleTypeSelect(type) {
     setDinoType(type);
     setImageLoading(true);
@@ -832,14 +820,14 @@ export default function DinoRPG() {
       setPlayerDino(loadedDino);
     } catch (error) {
       console.error("Failed to load dino images:", error);
-      setPlayerDino(dino); // Fallback to unloaded dino
+      setPlayerDino(dino);
     } finally {
       setImageLoading(false);
     }
     updatePlayerInSanity({ dinoType: type });
   }
 
-  // Update startBattle to preload opponent images
+  
   async function startBattle() {
     const opponent = getRandomDino(null, level);
     if (!opponent) {
@@ -851,7 +839,7 @@ export default function DinoRPG() {
     try {
       const loadedOpponent = await preloadDinoImages(opponent);
       
-      // Calculate opponent stats
+      
       const opponentMaxHp = BASE_HP + (loadedOpponent.level - 1) * HP_PER_LEVEL;
       loadedOpponent.maxHp = opponentMaxHp;
       loadedOpponent.attackPower = BASE_DAMAGE + (loadedOpponent.level - 1) * DAMAGE_PER_LEVEL;
@@ -945,7 +933,6 @@ export default function DinoRPG() {
       });
       setBattleLog(prev => [...prev, `Purchased ${item.name}!`]);
     } else {
-      // Handle other items as before...
       switch (item.type) {
         case 'perm_attack_speed':
           setAttackSpeed(prev => prev + item.boost);
@@ -966,7 +953,6 @@ export default function DinoRPG() {
           setPlayerHp(prev => prev + item.boost);
           break;
         default:
-          // Handle effects
           if (item.type.startsWith('effect_')) {
             const newItem = {
               name: item.name,
@@ -994,11 +980,13 @@ export default function DinoRPG() {
   }
 
   return (
-    <div className="dino-rpg-container">
-      <h2 className="pokemon-heading">Dino RPG - Hardcore Mode</h2>
+    <main className="dino-rpg-container">
+      <header>
+        <h1 className="pokemon-heading">Dino RPG - Hardcore Mode</h1>
+      </header>
       {!registered ? (
-        <>
-          <div className="login-container">
+        <section className="registration-section">
+          <article className="login-container">
             <form onSubmit={showLogin ? handleLogin : handleSubmit} style={{
               display: 'flex',
               flexDirection: 'column',
@@ -1010,7 +998,7 @@ export default function DinoRPG() {
                 display: 'flex',
                 alignItems: 'center'
               }}>
-                <label style={{
+                <label htmlFor="dinoName" style={{
                   width: '120px',
                   textAlign: 'right',
                   marginRight: '1rem'
@@ -1018,6 +1006,7 @@ export default function DinoRPG() {
                   Dino Name:
                 </label>
                 <input
+                  id="dinoName"
                   className="dino-rpg-input"
                   type="text"
                   value={dinoName}
@@ -1035,7 +1024,7 @@ export default function DinoRPG() {
                 display: 'flex',
                 alignItems: 'center'
               }}>
-                <label style={{
+                <label htmlFor="password" style={{
                   width: '120px',
                   textAlign: 'right',
                   marginRight: '1rem'
@@ -1043,6 +1032,7 @@ export default function DinoRPG() {
                   Password:
                 </label>
                 <input
+                  id="password"
                   className="dino-rpg-input"
                   type="password"
                   value={showLogin ? loginPassword : password}
@@ -1074,16 +1064,18 @@ export default function DinoRPG() {
             >
               {showLogin ? "Need to register?" : "Already registered?"}
             </button>
-          </div>
-          <Highscores />
-        </>
+          </article>
+          <aside>
+            <Highscores />
+          </aside>
+        </section>
       ) : !dinoType ? (
-        <div>
-          <h3>
+        <section className="dino-type-selection">
+          <h2>
             Welcome, <span style={{ color: "#43a047" }}>{dinoName}</span>!
-          </h3>
+          </h2>
           <p>Choose your dino type:</p>
-          <div
+          <nav
             style={{
               display: "flex",
               gap: "1.5rem",
@@ -1128,11 +1120,11 @@ export default function DinoRPG() {
                 </div>
               </button>
             ))}
-          </div>
-        </div>
+          </nav>
+        </section>
       ) : (
-        <div>
-          <div className="player-stats">
+        <section className="game-section">
+          <header className="player-stats">
             <div style={{ 
               display: "flex", 
               gap: "1rem", 
@@ -1166,10 +1158,11 @@ export default function DinoRPG() {
                 Shop
               </button>
             </div>
-          </div>
+          </header>
+
           {inventory.length > 0 && (
-            <div style={{ marginTop: "1rem", marginBottom: "1rem" }}>
-              <h4>Inventory:</h4>
+            <section className="inventory-section" style={{ marginTop: "1rem", marginBottom: "1rem" }}>
+              <h3>Inventory:</h3>
               <div style={{ display: "flex", gap: "0.5rem", justifyContent: "center", flexWrap: "wrap" }}>
                 {inventory.map((item, idx) => {
                   const details = getItemDetails(item);
@@ -1177,7 +1170,7 @@ export default function DinoRPG() {
                   const sellPrice = isMemeItem ? Math.floor(MEME_ITEMS.find(m => m.type === item.type).fossilCost * 0.5) : 0;
                   
                   return (
-                    <div
+                    <article
                       key={idx}
                       className="inventory-item"
                       style={{
@@ -1269,28 +1262,25 @@ export default function DinoRPG() {
                           </button>
                         </div>
                       )}
-                    </div>
+                    </article>
                   );
                 })}
               </div>
-            </div>
+            </section>
           )}
-          <div
-            style={{
-              margin: "2rem 0",
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
-          >
+
+          <section className="battle-arena" style={{
+            margin: "2rem 0",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}>
             {/* Player Dino */}
-            <div
-              style={{
-                width: "48%",
-                textAlign: "center",
-                position: "relative",
-              }}
-            >
+            <article className="player-dino" style={{
+              width: "48%",
+              textAlign: "center",
+              position: "relative",
+            }}>
               {/* Player Dino Image */}
               <div style={{ position: "relative", display: "inline-block" }}>
                 <img
@@ -1384,15 +1374,13 @@ export default function DinoRPG() {
                 <StatDisplay label="Speed" value={attackSpeed.toFixed(1)} />
                 <StatDisplay label="Crit" value={`${(critChance * 100).toFixed(0)}%`} />
               </div>
-            </div>
+            </article>
             {/* Opponent Dino */}
-            <div
-              style={{
-                width: "48%",
-                textAlign: "center",
-                position: "relative",
-              }}
-            >
+            <article className="opponent-dino" style={{
+              width: "48%",
+              textAlign: "center",
+              position: "relative",
+            }}>
               {opponent && (
                 <>
                   <div style={{ position: "relative", display: "inline-block" }}>
@@ -1440,33 +1428,20 @@ export default function DinoRPG() {
                   </div>
                 </>
               )}
-            </div>
-          </div>
+            </article>
+          </section>
 
           {/* Battle log and results */}
           {battleLog.length > 0 && !battleResult && (
-            <div
-              style={{
-                background: "#eaf7d0",
-                border: "2px solid #234d20",
-                borderRadius: "0.7rem",
-                margin: "1rem auto",
-                maxWidth: 340,
-                fontFamily: "monospace",
-                fontSize: "1rem",
-                padding: "0.5rem 1rem",
-                minHeight: "2.2rem",
-                color: "#234d20"
-              }}
-            >
+            <section className="battle-log">
               {battleLog.slice(-2).map((log, i) => (
-                <div key={i}>{log}</div>
+                <p key={i}>{log}</p>
               ))}
-            </div>
+            </section>
           )}
 
           {battleResult && (
-            <div style={{
+            <section className="battle-results" style={{
               background: "#eaf7d0",
               padding: "1.5rem",
               borderRadius: "1rem",
@@ -1614,24 +1589,27 @@ export default function DinoRPG() {
                   </button>
                 </div>
               )}
-            </div>
+            </section>
           )}
 
-          {/* Battle button */}
-          {!isBattling && !battleResult && (
-            <button onClick={startBattle} className="battle-button">
-              Battle!
-            </button>
-          )}
-          
-          {isBattling && !battleResult && (
-            <div style={{ marginTop: "1.5rem", color: "#234d20" }}>
-              Battling...
-            </div>
-          )}
+          {/* Battle controls */}
+          <footer className="battle-controls">
+            {!isBattling && !battleResult && (
+              <button onClick={startBattle} className="battle-button">
+                Battle!
+              </button>
+            )}
+            
+            {isBattling && !battleResult && (
+              <div style={{ marginTop: "1.5rem", color: "#234d20" }}>
+                Battling...
+              </div>
+            )}
+          </footer>
 
+          {/* Shop modal */}
           {showShop && (
-            <div style={{
+            <dialog open className="shop-modal" style={{
               position: 'fixed',
               top: '50%',
               left: '50%',
@@ -1688,11 +1666,12 @@ export default function DinoRPG() {
               >
                 ✕
               </button>
-            </div>
+            </dialog>
           )}
 
+          {/* Loading overlay */}
           {imageLoading && (
-            <div style={{
+            <dialog open className="loading-overlay" style={{
               position: "fixed",
               top: 0,
               left: 0,
@@ -1714,11 +1693,11 @@ export default function DinoRPG() {
                 <div style={{ fontSize: "1.2rem", marginBottom: "0.5rem" }}>Loading Dinosaur...</div>
                 <div style={{ fontSize: "2rem" }}>🦕</div>
               </div>
-            </div>
+            </dialog>
           )}
-        </div>
+        </section>
       )}
-    </div>
+    </main>
   );
 }
 

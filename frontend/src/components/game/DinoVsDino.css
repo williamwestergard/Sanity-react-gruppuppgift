@@ -24,8 +24,8 @@
   background: #fff;
   border-radius: 1.2rem;
   box-shadow: 0 2px 12px #0001;
-  padding: 2.5rem 1rem 2rem 1rem; /* more padding for height */
-  min-height: 320px; /* set a minimum height */
+  padding: 2.5rem 1rem 2rem 1rem; 
+  min-height: 320px; 
   display: flex;
   flex-direction: column;
   align-items: center;

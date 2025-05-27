@@ -2,7 +2,7 @@
 
 To allow other team members to use the DinoRPG game, they'll need their own Sanity API tokens. Follow these steps:
 
-8. Copy the token:  VITE_SANITY_TOKEN=skR6Nvhqr9mdgH5ix2c7aDpU5g6oQkCBClE1wvAN20EfTQAbE2zpFFOXp15sIoUKYYtrtyICMneOh6dQxKK9WXWH0ilH5lXFHLMQFqQjwE8ZGA4wD6ewnrG2P1SQHgFycoFbUQg2VjuyuJExErV490r7X5oNl473JsnFRys6CVkHoT2Gyvw9
+8. Copy the token:  VITE_SANITY_TOKEN=
 
 9. Create a `.env` file in the `frontend` directory with this content:
 ```env

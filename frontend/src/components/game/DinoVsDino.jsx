@@ -3,7 +3,7 @@ import dinos from "../../assets/db-with-img.json";
 import "./DinoVsDino.css";
 
 function getRandomVotes() {
-  // Generate random votes for each dino (between 10 and 100)
+  // Mock röster
   const v0 = Math.floor(Math.random() * 90) + 10;
   const v1 = Math.floor(Math.random() * 90) + 10;
   return [v0, v1];

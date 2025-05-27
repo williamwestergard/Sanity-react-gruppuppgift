@@ -9,10 +9,10 @@ function getRandomOptions(correct, all, n = 3) {
   return options;
 }
 
-// Helper to get silhouette path
+// Hämtar siluettbildens sökväg baserat på dinosauriens namn
 function getSilhouettePath(name) {
   if (!name) return null;
-  // Remove problematic characters for file names
+  // filtrerar bort ogiltiga tecken och ersätter mellanslag med understreck
   const safeName = name.replace(/[^a-zA-Z0-9 _-]/g, "").replace(/ /g, "_");
   return `/src/assets/dino_silhouettes/${safeName}.png`;
 }

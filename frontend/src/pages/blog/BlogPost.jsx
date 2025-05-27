@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { client } from "../../sanityClient";
-import { PortableText } from "@portabletext/react";
 import "./blog.css";
 import imageUrlBuilder from "@sanity/image-url";
 import Comments from "../../components/comments/comments.jsx";

@@ -42,6 +42,15 @@ We built the entire frontend ourselves and integrated Sanity to manage content d
 
 ---
 
+## 👥 Contributors
+
+- [William](https://github.com/williamwestergard)
+- [Daniel](https://github.com/Luckmore83)
+- [Simon](https://github.com/KarlSimonB)
+- [Madelen](https://github.com/MadelenNilsen)
+
+---
+
 ## 🙌 Credits
 
 - Dino logo and icons by [Smashicons](https://www.flaticon.com/authors/smashicons) via [Flaticon](https://www.flaticon.com/)

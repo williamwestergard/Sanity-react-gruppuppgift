@@ -26,7 +26,7 @@ Before we started developing the site, we used **Figma** to create mockups for l
 
 We used **Trello** throughout the project to track our tasks, divide work, and stay organized during development.
 
-![Trello Screenshot](https://github.com/user-attachments/assets/7a2f70fd-dcc1-4917-9e4f-4b411a880c5d)
+![Screenshot 2025-05-28 115231](https://github.com/user-attachments/assets/96b685db-16d6-49bb-bbb8-124d76a55480)
 
 ---
 
